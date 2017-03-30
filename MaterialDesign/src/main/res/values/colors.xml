@@ -3,4 +3,17 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--通用颜色 ↑-->
+    <color name="common_style_red">#C63B38</color>
+    <color name="common_style_black">#000000</color>
+    <color name="common_style_white">#FFFFFF</color>
+    <color name="common_style_orange">#FF9D00</color>
+    <color name="common_style_green">#00ca43</color>
+    <color name="common_style_trans">@android:color/transparent</color><!--透明-->
+    <color name="common_style_half_trans">#7f000000</color><!--半透明-->
+    <!--通用颜色 ↓-->
+
+    <!--页面背景色-->
+    <color name="common_page_background_color">#ebebeb</color>
 </resources>
