@@ -1,8 +1,22 @@
 package com.jalen.materialdesign;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+import java.util.Arrays;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * @author Dragon
@@ -11,10 +25,70 @@ import android.support.v7.app.AppCompatActivity;
  * @date
  * @describe
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseAtivity {
+
+    @BindView(R.id.activity_main_recyclerView)
+    public RecyclerView recyclerView;
+
+    private String[] viewArray = new String[]{"RecyclerView"};
+    private List<String> viewList;
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void initUI(@Nullable Bundle savedInstanceState) {
+        recyclerView = (RecyclerView) findViewById(R.id.activity_main_recyclerView);
+        viewList = Arrays.asList(viewArray);
+        initRecyclerView();
     }
+
+    @Override
+    public Activity getActivity() {
+        return this;
+    }
+
+    @Override
+    public int getLayout() {
+        return R.layout.activity_main;
+    }
+
+    private void initRecyclerView() {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        layoutManager.setSmoothScrollbarEnabled(true);
+
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+
+        recyclerView.setAdapter(new Adapter());
+    }
+
+    private class Adapter extends RecyclerView.Adapter<MainActivity.ViewHolder> {
+
+        @Override
+        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            return new ViewHolder(LayoutInflater.from(getActivity()).inflate(R.layout.item_button, null));
+        }
+
+        @Override
+        public void onBindViewHolder(ViewHolder holder, int position) {
+            holder.btn.setText(TextUtils.isEmpty(viewList.get(position)) ? "" : viewList.get(position));
+        }
+
+        @Override
+        public int getItemCount() {
+            return viewList == null ? 0 : viewList.size();
+        }
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        @NonNull
+        @BindView(R.id.item_button)
+        public Button btn;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(ViewHolder.this, itemView);
+        }
+    }
+
+
 }

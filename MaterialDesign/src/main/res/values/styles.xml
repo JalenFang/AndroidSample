@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@color/common_page_background_color</item>
+        <item name="android:windowBackground">@color/common_color_page_background</item>
         <item name="android:windowAnimationStyle">@style/base_activity_animation</item>
     </style>
 
@@ -25,4 +25,28 @@
         <item name="android:taskToBackEnterAnimation">@anim/base_stay_orig</item>
         <item name="android:taskToBackExitAnimation">@anim/base_slide_right_out</item>
     </style>
+
+    <!--通用横线样式-->
+    <style name="common_horizental_line">
+        <item name="android:layout_height">@dimen/common_divider_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/common_color_divider_gray</item>
+    </style>
+
+    <!--通用竖线样式-->
+    <style name="common_vertical_line">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/common_divider_height</item>
+        <item name="android:background">@color/common_color_divider_gray</item>
+    </style>
+
+    <style name="item_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_45_dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
 </resources>
