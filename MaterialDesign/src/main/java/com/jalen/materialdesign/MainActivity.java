@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,9 @@ public class MainActivity extends BaseAtivity {
 
     @BindView(R.id.activity_main_recyclerView)
     public RecyclerView recyclerView;
+
+    private static final int RECYCLER_VIEW = 0;
+
 
     private String[] viewArray = new String[]{"RecyclerView"};
     private List<String> viewList;
@@ -71,6 +75,7 @@ public class MainActivity extends BaseAtivity {
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
             holder.btn.setText(TextUtils.isEmpty(viewList.get(position)) ? "" : viewList.get(position));
+            setOnClickListener(holder, position);
         }
 
         @Override
@@ -87,6 +92,28 @@ public class MainActivity extends BaseAtivity {
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(ViewHolder.this, itemView);
+        }
+    }
+
+    //点击事件
+    private void setOnClickListener(ViewHolder holder, final int position) {
+        holder.btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("dragon", viewList.get(position));
+                toActivity(position);
+            }
+        });
+    }
+
+    //跳转activity
+    private void toActivity(int position) {
+        switch (position) {
+            case RECYCLER_VIEW:
+
+                break;
+            default:
+                break;
         }
     }
 
