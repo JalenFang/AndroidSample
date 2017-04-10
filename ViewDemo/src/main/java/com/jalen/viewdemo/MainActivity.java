@@ -1,7 +1,12 @@
 package com.jalen.viewdemo;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+
+import com.jalen.viewdemo.activity.ViewPagerActivity;
+
+import butterknife.OnClick;
 
 /**
  * @author Dragon
@@ -11,8 +16,24 @@ import android.support.annotation.Nullable;
  * @describe
  */
 public class MainActivity extends BaseAtivity {
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public Activity getActivity() {
+        return this;
+    }
+
+    @Override
+    public int getLayout() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initUI(@Nullable Bundle savedInstanceState) {
+
+    }
+
+    @OnClick(R.id.activity_main_btn_view_pager)
+    public void clickViewPager() {
+        ViewPagerActivity.startActivity(getActivity());
     }
 }

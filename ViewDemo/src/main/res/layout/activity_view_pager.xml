@@ -8,10 +8,10 @@
     tools:context="com.jalen.viewdemo.MainActivity">
 
     <Button
-        android:id="@+id/activity_main_btn_view_pager"
+        android:id="@+id/activity_view_pager_btn_direction_view_pager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="ViewPager"
+        android:text="DirectionViewPager"
         android:textAllCaps="false" />
 </LinearLayout>
