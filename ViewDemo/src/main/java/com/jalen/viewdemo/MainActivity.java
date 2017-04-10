@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.jalen.viewdemo.activity.ViewPagerActivity;
+import com.jalen.viewdemo.activity.viewpager.ViewPagerActivity;
 
 import butterknife.OnClick;
 

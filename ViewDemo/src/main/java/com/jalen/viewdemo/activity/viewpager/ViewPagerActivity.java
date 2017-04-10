@@ -1,4 +1,4 @@
-package com.jalen.viewdemo.activity;
+package com.jalen.viewdemo.activity.viewpager;
 
 
 import android.app.Activity;
@@ -38,7 +38,7 @@ public class ViewPagerActivity extends BaseAtivity {
 
     @OnClick(R.id.activity_view_pager_btn_direction_view_pager)
     public void clickDirectionViewPager() {
-
+        startActivity(new Intent(getActivity(), DirectionViewPagerActivity.class));
     }
 
     public static void startActivity(Context context) {
