@@ -38,7 +38,7 @@ public class ViewPagerActivity extends BaseAtivity {
 
     @OnClick(R.id.activity_view_pager_btn_direction_view_pager)
     public void clickDirectionViewPager() {
-        startActivity(new Intent(getActivity(), DirectionViewPagerActivity.class));
+        DirectionViewPagerActivity.startActivity(getActivity());
     }
 
     public static void startActivity(Context context) {
