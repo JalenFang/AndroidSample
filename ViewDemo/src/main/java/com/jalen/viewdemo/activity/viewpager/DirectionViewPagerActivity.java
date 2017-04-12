@@ -101,7 +101,7 @@ public class DirectionViewPagerActivity extends BaseAtivity {
 
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+            Log.i("dragon", "position = " + position + " ; " + "positionOffset = " + positionOffset + " ; " + "positionOffsetPixels = " + positionOffsetPixels);
         }
 
         @Override
@@ -111,7 +111,7 @@ public class DirectionViewPagerActivity extends BaseAtivity {
 
         @Override
         public void onPageScrollStateChanged(int state) {
-            Log.i("dragon", "state = " + state);
+            Log.v("dragon", "state = " + state);
         }
 
         @Override
@@ -119,4 +119,5 @@ public class DirectionViewPagerActivity extends BaseAtivity {
             Log.w("dragon", "slideState = " + slideState);
         }
     }
+
 }
