@@ -1,1 +1,2 @@
-include ':MaterialDesign', ':ViewDemo', ':library_widget'
+include ':MaterialDesign', ':ViewDemo', ':library_widget', ':CanvasKnife'
+
