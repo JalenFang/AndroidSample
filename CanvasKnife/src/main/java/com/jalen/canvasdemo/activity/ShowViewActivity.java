@@ -16,6 +16,7 @@ import com.jalen.canvasdemo.view.CircleView;
 import com.jalen.canvasdemo.view.LineView;
 import com.jalen.canvasdemo.view.OvalView;
 import com.jalen.canvasdemo.view.PathView;
+import com.jalen.canvasdemo.view.PointView;
 import com.jalen.canvasdemo.view.RectView;
 import com.jalen.canvasdemo.view.RoundRectView;
 
@@ -70,6 +71,8 @@ public class ShowViewActivity extends AppCompatActivity {
             llContainer.addView(new CircleView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.OVAL_VIEW)) {
             llContainer.addView(new OvalView(ShowViewActivity.this));
+        }else if (viewName.equals(ViewNameConstants.POINT_VIEW)) {
+            llContainer.addView(new PointView(ShowViewActivity.this));
         }
     }
 

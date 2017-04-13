@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
     // [+] Init
     private void initView() {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));//线性布局管理器
-        //recyclerView.setLayoutManager(new GridLayoutManager(this, 2));//表格布局管理器
-        //  recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL));//交错布局管理器
         viewNameList = initData();
         recyclerView.setAdapter(new Adapter());
     }
@@ -58,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         viewNameList.add(ViewNameConstants.Arc_View);
         viewNameList.add(ViewNameConstants.BITMAP_VIEW);
         viewNameList.add(ViewNameConstants.OVAL_VIEW);
+        viewNameList.add(ViewNameConstants.POINT_VIEW);
         return viewNameList;
     }
     // [-] Init

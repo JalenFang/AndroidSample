@@ -25,4 +25,6 @@ public class ViewNameConstants {
     public static final String BITMAP_VIEW = "BitmapView";
 
     public static final String OVAL_VIEW = "OvalView";
+
+    public static final String POINT_VIEW = "PointView";
 }
