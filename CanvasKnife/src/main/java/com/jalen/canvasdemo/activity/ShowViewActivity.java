@@ -56,7 +56,7 @@ public class ShowViewActivity extends AppCompatActivity {
         } else if (viewName.equals(ViewNameConstants.ROUND_RECT_VIEW)) {
             llContainer.addView(new RoundRectView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.TEXT_VIEW)) {
-            llContainer.addView(new TextView(ShowViewActivity.this));
+            llContainer.addView(new com.jalen.canvasdemo.view.TextView (ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.LINE_VIEW)) {
             llContainer.addView(new LineView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.PATH_VIEW)) {

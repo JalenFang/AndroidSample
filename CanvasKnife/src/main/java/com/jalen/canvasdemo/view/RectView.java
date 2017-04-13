@@ -16,24 +16,20 @@ import com.jalen.canvasdemo.utils.PaintUtil;
  */
 public class RectView extends View {
     private Paint paint;
-    private Context context;
 
     public RectView(Context context) {
         super(context);
-        this.context = context;
         init();
     }
 
     public RectView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.context = context;
         init();
     }
 
     private void init() {
-        paint = PaintUtil.getPaint(context);
+        paint = PaintUtil.getPaint(getContext());
     }
-
 
     @Override
     protected void onDraw(Canvas canvas) {

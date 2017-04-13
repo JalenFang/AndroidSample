@@ -38,8 +38,10 @@ public class PathView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        drawPath(canvas);
-        drawPath1(canvas);
+        //drawPath(canvas);
+        //drawPath1(canvas);
+        drawLinePathClose(canvas);
+        drawLinePathNotClose(canvas);
     }
 
     private void drawPath(Canvas canvas) {
@@ -62,4 +64,38 @@ public class PathView extends View {
         path.quadTo(30, 220, 320, 450);
         canvas.drawPath(path, paint);
     }
+
+    //Path闭合
+    private void drawLinePathClose(Canvas canvas) {
+        Paint paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(5);
+        paint.setColor(Color.RED);
+
+        Path path = new Path();
+        path.moveTo(50, 50);//设置起始点
+        path.lineTo(50,100);//第一条直线
+        path.lineTo(100,100);
+        path.close();
+
+        canvas.drawPath(path, paint);
+    }
+
+    //Path不闭合
+    private void drawLinePathNotClose(Canvas canvas) {
+        Paint paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(5);
+        paint.setColor(Color.RED);
+
+        Path path = new Path();
+        path.moveTo(50, 150);//设置起始点
+        path.lineTo(50,200);//第一条直线
+        path.lineTo(100,200);
+
+        canvas.drawPath(path, paint);
+    }
+
 }
