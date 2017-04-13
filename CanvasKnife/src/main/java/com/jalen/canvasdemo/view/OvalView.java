@@ -13,7 +13,7 @@ import com.jalen.canvasdemo.utils.PaintUtil;
 /**
  * @author Jalen
  * @date 2016/12/15 22:01
- * @describe
+ * @describe  椭圆
  */
 public class OvalView extends View {
     private Context context;

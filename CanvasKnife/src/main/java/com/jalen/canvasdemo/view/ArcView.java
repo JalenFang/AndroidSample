@@ -13,7 +13,7 @@ import com.jalen.canvasdemo.utils.PaintUtil;
 /**
  * @author Jalen
  * @date 2016/12/23 21:52
- * @describe
+ * @describe 弧线
  */
 public class ArcView extends View {
     private Context context;
