@@ -10,6 +10,12 @@ import android.widget.TextView;
 
 import com.jalen.canvasdemo.R;
 import com.jalen.canvasdemo.constants.ViewNameConstants;
+import com.jalen.canvasdemo.view.ArcView;
+import com.jalen.canvasdemo.view.BezierView;
+import com.jalen.canvasdemo.view.CircleView;
+import com.jalen.canvasdemo.view.LineView;
+import com.jalen.canvasdemo.view.OvalView;
+import com.jalen.canvasdemo.view.PathView;
 import com.jalen.canvasdemo.view.RectView;
 import com.jalen.canvasdemo.view.RoundRectView;
 
@@ -49,21 +55,21 @@ public class ShowViewActivity extends AppCompatActivity {
         } else if (viewName.equals(ViewNameConstants.ROUND_RECT_VIEW)) {
             llContainer.addView(new RoundRectView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.TEXT_VIEW)) {
-            llContainer.addView(new com.jalen.canvasdemo.view.TextView(ShowViewActivity.this));
+            llContainer.addView(new TextView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.LINE_VIEW)) {
-            llContainer.addView(new com.jalen.canvasdemo.view.LineView(ShowViewActivity.this));
+            llContainer.addView(new LineView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.PATH_VIEW)) {
-            llContainer.addView(new com.jalen.canvasdemo.view.PathView(ShowViewActivity.this));
+            llContainer.addView(new PathView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.BEZIER_VIEW)) {
-            llContainer.addView(new com.jalen.canvasdemo.view.BezierView(ShowViewActivity.this));
+            llContainer.addView(new BezierView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.CIRCLE_VIEW)) {
-            llContainer.addView(new com.jalen.canvasdemo.view.CircleView(ShowViewActivity.this));
-        }else if (viewName.equals(ViewNameConstants.Arc_View)) {
-            llContainer.addView(new com.jalen.canvasdemo.view.ArcView(ShowViewActivity.this));
-        }else if (viewName.equals(ViewNameConstants.BITMAP_VIEW)) {
-            llContainer.addView(new com.jalen.canvasdemo.view.CircleView(ShowViewActivity.this));
-        }else if (viewName.equals(ViewNameConstants.OVAL_VIEW)) {
-            llContainer.addView(new com.jalen.canvasdemo.view.OvalView(ShowViewActivity.this));
+            llContainer.addView(new CircleView(ShowViewActivity.this));
+        } else if (viewName.equals(ViewNameConstants.Arc_View)) {
+            llContainer.addView(new ArcView(ShowViewActivity.this));
+        } else if (viewName.equals(ViewNameConstants.BITMAP_VIEW)) {
+            llContainer.addView(new CircleView(ShowViewActivity.this));
+        } else if (viewName.equals(ViewNameConstants.OVAL_VIEW)) {
+            llContainer.addView(new OvalView(ShowViewActivity.this));
         }
     }
 
