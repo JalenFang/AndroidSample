@@ -14,24 +14,24 @@ import android.view.View;
  * @date 2017/4/14. 11:10
  * @editor
  * @date
- * @describe
+ * @describe  画板
  */
-public class BezierDrawView extends View {
+public class DrawView extends View {
 
     private Paint paint;
     private Path path;
 
-    public BezierDrawView(Context context) {
+    public DrawView(Context context) {
         super(context);
         init();
     }
 
-    public BezierDrawView(Context context, AttributeSet attrs) {
+    public DrawView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public BezierDrawView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public DrawView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
