@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.jalen.canvasdemo.R;
 import com.jalen.canvasdemo.constants.ViewNameConstants;
 import com.jalen.canvasdemo.view.ArcView;
+import com.jalen.canvasdemo.view.BezierDrawView;
 import com.jalen.canvasdemo.view.BezierView;
 import com.jalen.canvasdemo.view.CircleView;
 import com.jalen.canvasdemo.view.LineView;
@@ -56,7 +57,7 @@ public class ShowViewActivity extends AppCompatActivity {
         } else if (viewName.equals(ViewNameConstants.ROUND_RECT_VIEW)) {
             llContainer.addView(new RoundRectView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.TEXT_VIEW)) {
-            llContainer.addView(new com.jalen.canvasdemo.view.TextView (ShowViewActivity.this));
+            llContainer.addView(new com.jalen.canvasdemo.view.TextView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.LINE_VIEW)) {
             llContainer.addView(new LineView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.PATH_VIEW)) {
@@ -71,8 +72,10 @@ public class ShowViewActivity extends AppCompatActivity {
             llContainer.addView(new CircleView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.OVAL_VIEW)) {
             llContainer.addView(new OvalView(ShowViewActivity.this));
-        }else if (viewName.equals(ViewNameConstants.POINT_VIEW)) {
+        } else if (viewName.equals(ViewNameConstants.POINT_VIEW)) {
             llContainer.addView(new PointView(ShowViewActivity.this));
+        } else if (viewName.equals(ViewNameConstants.BEZIER_DRAW_VIEW)) {
+            llContainer.addView(new BezierDrawView(ShowViewActivity.this));
         }
     }
 

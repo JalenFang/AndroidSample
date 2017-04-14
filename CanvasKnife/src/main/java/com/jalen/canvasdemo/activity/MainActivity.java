@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         viewNameList.add(ViewNameConstants.BITMAP_VIEW);
         viewNameList.add(ViewNameConstants.OVAL_VIEW);
         viewNameList.add(ViewNameConstants.POINT_VIEW);
+        viewNameList.add(ViewNameConstants.BEZIER_DRAW_VIEW);
         return viewNameList;
     }
     // [-] Init

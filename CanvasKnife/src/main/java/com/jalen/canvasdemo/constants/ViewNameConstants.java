@@ -27,4 +27,6 @@ public class ViewNameConstants {
     public static final String OVAL_VIEW = "OvalView";
 
     public static final String POINT_VIEW = "PointView";
+
+    public static final String BEZIER_DRAW_VIEW = "BezierDrawView";
 }
