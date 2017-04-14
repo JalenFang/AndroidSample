@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         viewNameList.add(ViewNameConstants.POINT_VIEW);
         viewNameList.add(ViewNameConstants.DRAW_VIEW);
         viewNameList.add(ViewNameConstants.DRAW_VIEW_2);
+        viewNameList.add(ViewNameConstants.WAVE_VIEW);
         return viewNameList;
     }
     // [-] Init

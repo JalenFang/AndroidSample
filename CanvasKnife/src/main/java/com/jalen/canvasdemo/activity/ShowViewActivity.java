@@ -21,6 +21,7 @@ import com.jalen.canvasdemo.view.PathView;
 import com.jalen.canvasdemo.view.PointView;
 import com.jalen.canvasdemo.view.RectView;
 import com.jalen.canvasdemo.view.RoundRectView;
+import com.jalen.canvasdemo.view.WaveView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -79,6 +80,8 @@ public class ShowViewActivity extends AppCompatActivity {
             llContainer.addView(new DrawView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.DRAW_VIEW_2)) {
             llContainer.addView(new Draw2View(ShowViewActivity.this));
+        } else if (viewName.equals(ViewNameConstants.WAVE_VIEW)) {
+            llContainer.addView(new WaveView(ShowViewActivity.this));
         }
     }
 
