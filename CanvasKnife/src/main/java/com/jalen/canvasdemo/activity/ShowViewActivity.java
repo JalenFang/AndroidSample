@@ -11,9 +11,10 @@ import android.widget.TextView;
 import com.jalen.canvasdemo.R;
 import com.jalen.canvasdemo.constants.ViewNameConstants;
 import com.jalen.canvasdemo.view.ArcView;
-import com.jalen.canvasdemo.view.DrawView;
 import com.jalen.canvasdemo.view.BezierView;
 import com.jalen.canvasdemo.view.CircleView;
+import com.jalen.canvasdemo.view.Draw2View;
+import com.jalen.canvasdemo.view.DrawView;
 import com.jalen.canvasdemo.view.LineView;
 import com.jalen.canvasdemo.view.OvalView;
 import com.jalen.canvasdemo.view.PathView;
@@ -74,8 +75,10 @@ public class ShowViewActivity extends AppCompatActivity {
             llContainer.addView(new OvalView(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.POINT_VIEW)) {
             llContainer.addView(new PointView(ShowViewActivity.this));
-        } else if (viewName.equals(ViewNameConstants.BEZIER_DRAW_VIEW)) {
+        } else if (viewName.equals(ViewNameConstants.DRAW_VIEW)) {
             llContainer.addView(new DrawView(ShowViewActivity.this));
+        } else if (viewName.equals(ViewNameConstants.DRAW_VIEW_2)) {
+            llContainer.addView(new Draw2View(ShowViewActivity.this));
         }
     }
 

@@ -14,24 +14,25 @@ import android.view.View;
  * @date 2017/4/14. 11:10
  * @editor
  * @date
- * @describe 画板(使用path的lineto 把点连成线)
+ * @describe 画板(使用二阶贝塞尔曲线)
  */
-public class DrawView extends View {
+public class Draw2View extends View {
 
     private Paint paint;
     private Path path;
+    private float mPreX, mPreY;
 
-    public DrawView(Context context) {
+    public Draw2View(Context context) {
         super(context);
         init();
     }
 
-    public DrawView(Context context, AttributeSet attrs) {
+    public Draw2View(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public DrawView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public Draw2View(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
@@ -45,14 +46,24 @@ public class DrawView extends View {
         path = new Path();
     }
 
+    //public void quadTo(float x1, float y1, float x2, float y2)
+    //参数中(x1,y1)是控制点坐标，(x2,y2)是终点坐标
+
+    //将两个线段的中间做为二阶贝尔赛曲线的起始点和终点，把上一个手指的位置做为控制点
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 path.moveTo(event.getX(), event.getY());
+                mPreX = event.getX();
+                mPreY = event.getY();
                 return true;
             case MotionEvent.ACTION_MOVE:
-                path.lineTo(event.getX(), event.getY());
+                float endX = (mPreX + event.getX()) / 2;
+                float endY = (mPreY + event.getY()) / 2;
+                path.quadTo(mPreX, mPreY, endX, endY);
+                mPreX = event.getX();
+                mPreY = event.getY();
                 invalidate();
                 break;
         }

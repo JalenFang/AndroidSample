@@ -28,5 +28,6 @@ public class ViewNameConstants {
 
     public static final String POINT_VIEW = "PointView";
 
-    public static final String BEZIER_DRAW_VIEW = "BezierDrawView";
+    public static final String DRAW_VIEW = "DrawView";
+    public static final String DRAW_VIEW_2 = "DrawView2";
 }
