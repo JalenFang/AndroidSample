@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.jalen.viewdemo.activity.linearlayout.LinearLayoutActivity;
 import com.jalen.viewdemo.activity.viewpager.ViewPagerActivity;
 
 import butterknife.OnClick;
@@ -35,5 +36,10 @@ public class MainActivity extends BaseAtivity {
     @OnClick(R.id.activity_main_btn_view_pager)
     public void clickViewPager() {
         ViewPagerActivity.startActivity(getActivity());
+    }
+
+    @OnClick(R.id.activity_main_btn_linearlayout)
+    public void clickLinearLayout() {
+        LinearLayoutActivity.startActivity(getActivity());
     }
 }
