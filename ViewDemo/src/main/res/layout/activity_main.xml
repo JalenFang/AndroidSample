@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_margin="5dp"
         android:text="ViewPager"
         android:textAllCaps="false" />
 
@@ -20,6 +21,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_margin="5dp"
         android:text="LinearLayout"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/activity_main_btn_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="Custom"
         android:textAllCaps="false" />
 </LinearLayout>

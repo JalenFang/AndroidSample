@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.jalen.viewdemo.activity.custom.CustomActivity;
 import com.jalen.viewdemo.activity.linearlayout.LinearLayoutActivity;
 import com.jalen.viewdemo.activity.viewpager.ViewPagerActivity;
 
@@ -41,5 +42,10 @@ public class MainActivity extends BaseAtivity {
     @OnClick(R.id.activity_main_btn_linearlayout)
     public void clickLinearLayout() {
         LinearLayoutActivity.startActivity(getActivity());
+    }
+
+    @OnClick(R.id.activity_main_btn_custom)
+    public void clickCustom() {
+        CustomActivity.startActivity(getActivity());
     }
 }

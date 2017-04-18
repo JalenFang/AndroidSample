@@ -19,6 +19,8 @@
         <activity android:name=".activity.viewpager.DirectionViewPagerActivity" />
         <activity android:name=".activity.linearlayout.MyLinearLayoutActivity" />
         <activity android:name=".activity.linearlayout.LinearLayoutActivity" />
+        <activity android:name=".activity.custom.CustomActivity" />
+        <activity android:name=".activity.custom.FolwLayoutActivity" />
     </application>
 
 </manifest>
