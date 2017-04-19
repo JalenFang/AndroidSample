@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jalen.animatordemo.MainActivity">
+
+    <Button
+        android:id="@+id/activity_demo1_btn_start_animation"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="开始动画" />
+
+    <TextView
+        android:id="@+id/activity_demo1_tv_view"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:background="#00ff00"
+        android:gravity="center"
+        android:text="Hello World!" />
+</LinearLayout>
