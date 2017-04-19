@@ -1,5 +1,6 @@
 package com.jalen.animatordemo.activity;
 
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,22 +24,24 @@ import com.jalen.animatordemo.R;
  */
 public class Demo1Activity extends AppCompatActivity {
 
-    private Button btnStartAnimation;
+    private Button btnStartViewAnimation;
     private TextView tvView;
+    private Button btnStartPropertyAnimation;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo1);
 
-        btnStartAnimation = (Button) findViewById(R.id.activity_demo1_btn_start_animation);
+        btnStartViewAnimation = (Button) findViewById(R.id.activity_demo1_btn_start_view_animation);
+        btnStartPropertyAnimation = (Button) findViewById(R.id.activity_demo1_btn_start_property_animation);
         tvView = (TextView) findViewById(R.id.activity_demo1_tv_view);
 
         setClickListener();
     }
 
     private void setClickListener() {
-        btnStartAnimation.setOnClickListener(new View.OnClickListener() {
+        btnStartViewAnimation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final TranslateAnimation animation = new TranslateAnimation(Animation.ABSOLUTE, 0, Animation.ABSOLUTE, 800,
@@ -46,6 +49,24 @@ public class Demo1Activity extends AppCompatActivity {
                 animation.setFillAfter(true);
                 animation.setDuration(2000);
                 tvView.startAnimation(animation);
+            }
+        });
+
+
+        btnStartPropertyAnimation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ValueAnimator valueAnimator = ValueAnimator.ofInt(0, 400);
+                valueAnimator.setDuration(2000);
+                valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        int curValue = (int) animation.getAnimatedValue();
+                        tvView.layout(curValue, curValue, curValue + tvView.getWidth(), curValue + tvView.getHeight());
+                    }
+                });
+
+                valueAnimator.start();
             }
         });
 

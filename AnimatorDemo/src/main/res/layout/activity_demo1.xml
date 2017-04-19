@@ -8,10 +8,18 @@
     tools:context="com.jalen.animatordemo.MainActivity">
 
     <Button
-        android:id="@+id/activity_demo1_btn_start_animation"
+        android:id="@+id/activity_demo1_btn_start_view_animation"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="开始动画" />
+        android:text="开始动画ViewAniamtion"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/activity_demo1_btn_start_property_animation"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="开始动画PropertyAniamtion"
+        android:textAllCaps="false" />
 
     <TextView
         android:id="@+id/activity_demo1_tv_view"
