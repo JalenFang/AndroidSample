@@ -21,6 +21,7 @@
         <activity android:name=".activity.linearlayout.LinearLayoutActivity" />
         <activity android:name=".activity.custom.CustomActivity" />
         <activity android:name=".activity.custom.FolwLayoutActivity" />
+        <activity android:name=".activity.checkview.CheckViewActivity" />
     </application>
 
 </manifest>

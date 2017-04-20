@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/view_score_rank_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_half_circle_gray"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/view_score_rank_rb_all_company"
+            android:layout_width="165dp"
+            android:layout_height="32dp"
+            android:background="@drawable/selector_cash_score"
+            android:button="@null"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="全公司"
+            android:textColor="@drawable/selector_black_normal_and_white"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/view_score_rank_rb_direct_follower"
+            android:layout_width="165dp"
+            android:layout_height="32dp"
+            android:background="@drawable/selector_cash_score"
+            android:button="@null"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="直接下属"
+            android:textColor="@drawable/selector_black_normal_and_white"
+            android:textSize="17sp" />
+
+    </RadioGroup>
+
+</LinearLayout>
