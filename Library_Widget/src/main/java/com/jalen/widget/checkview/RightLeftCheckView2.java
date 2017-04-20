@@ -7,8 +7,6 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -62,11 +60,23 @@ public class RightLeftCheckView2 extends LinearLayout {
             public void onClick(View v) {
                 tvAllCompany.setTextColor(ContextCompat.getColor(getContext(), R.color.common_style_white));
                 tvDirectFollower.setTextColor(ContextCompat.getColor(getContext(), R.color.common_style_black));
-                TranslateAnimation animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, -1,
+                /*TranslateAnimation animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, -1,
                         Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0);
                 animation.setFillAfter(true);
                 animation.setDuration(1000);
-                ivBg.startAnimation(animation);
+                ivBg.startAnimation(animation);*/
+                ValueAnimator valueAnimator = ValueAnimator.ofInt(0, value);
+                valueAnimator.setDuration(500);
+                valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        int curValue = (int) animation.getAnimatedValue();
+                        Log.i("dragon", "curValue = " + curValue);
+                        ivBg.offsetLeftAndRight(-curValue);
+                    }
+                });
+
+                valueAnimator.start();
             }
         });
 
@@ -82,13 +92,13 @@ public class RightLeftCheckView2 extends LinearLayout {
                 ivBg.startAnimation(animation);*/
 
                 ValueAnimator valueAnimator = ValueAnimator.ofInt(0, value);
-                valueAnimator.setDuration(1000);
+                valueAnimator.setDuration(500);
                 valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator animation) {
                         int curValue = (int) animation.getAnimatedValue();
                         Log.i("dragon", "curValue = " + curValue);
-                        ivBg.scrollBy(curValue, 0);
+                        ivBg.offsetLeftAndRight(curValue);
                     }
                 });
 
