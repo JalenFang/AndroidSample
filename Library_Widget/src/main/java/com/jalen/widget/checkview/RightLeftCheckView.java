@@ -51,6 +51,12 @@ public class RightLeftCheckView extends LinearLayout {
         setCheckListener();
     }
 
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+        radioGroup.check(R.id.view_score_rank_rb_all_company);
+    }
+
     private void setCheckListener() {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
