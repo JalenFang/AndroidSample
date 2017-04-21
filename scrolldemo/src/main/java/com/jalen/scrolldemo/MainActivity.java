@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.jalen.scrolldemo.activity.LayoutActivity;
+import com.jalen.scrolldemo.activity.LayoutParamsActivity;
 import com.jalen.scrolldemo.activity.OffSetActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 OffSetActivity.startActivity(MainActivity.this);
+            }
+        });
+
+        findViewById(R.id.activity_main_btn_LayoutParams).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LayoutParamsActivity.startActivity(MainActivity.this);
             }
         });
     }

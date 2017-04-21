@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".activity.LayoutActivity" />
         <activity android:name=".activity.OffSetActivity" />
+        <activity android:name=".activity.LayoutParamsActivity" />
     </application>
 
 </manifest>

@@ -17,22 +17,22 @@ import com.jalen.scrolldemo.R;
  * @date
  * @describe
  */
-public class OffSetActivity extends AppCompatActivity {
+public class LayoutParamsActivity extends AppCompatActivity {
 
     private ActionBar actionBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_off_set);
+        setContentView(R.layout.activity_layout_params);
 
         actionBar = getSupportActionBar();
-        actionBar.setTitle("offset");
+        actionBar.setTitle("LayoutParams");
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     public static void startActivity(Context context) {
-        context.startActivity(new Intent(context, OffSetActivity.class));
+        context.startActivity(new Intent(context, LayoutParamsActivity.class));
     }
 
     @Override
