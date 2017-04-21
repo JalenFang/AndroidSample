@@ -18,6 +18,7 @@
         <activity android:name=".activity.LayoutActivity" />
         <activity android:name=".activity.OffSetActivity" />
         <activity android:name=".activity.LayoutParamsActivity" />
+        <activity android:name=".activity.ScrollToActivity" />
     </application>
 
 </manifest>

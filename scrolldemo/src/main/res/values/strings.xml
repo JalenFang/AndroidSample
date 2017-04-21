@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ScrollDemo</string>
+    <string name="scroll_type">滑动类型</string>
+
+    <string name="scroll_to">ScrollTo</string>
+    <string name="scroll_by">ScrollBy</string>
+
+    <string-array name="scroll_style">
+        <item>@string/scroll_to</item>
+        <item>@string/scroll_by</item>
+    </string-array>
+
 </resources>
