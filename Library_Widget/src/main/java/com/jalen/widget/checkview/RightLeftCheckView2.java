@@ -4,7 +4,6 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,6 +26,7 @@ public class RightLeftCheckView2 extends LinearLayout {
     private TextView tvDirectFollower;
 
     private int value = dp2px(getContext(), 165);
+    private int lastValue;
 
     public RightLeftCheckView2(Context context) {
         super(context);
@@ -49,7 +49,8 @@ public class RightLeftCheckView2 extends LinearLayout {
         ivBg = (ImageView) findViewById(R.id.view_score_rank_check_2_iv_bg);
         tvAllCompany = (TextView) findViewById(R.id.view_score_rank_check_2_tv_all_company);
         tvDirectFollower = (TextView) findViewById(R.id.view_score_rank_check_2_tv_direct_follower);
-
+        tvAllCompany.setEnabled(false);
+        tvDirectFollower.setEnabled(true);
         setClickListener();
     }
 
@@ -58,6 +59,9 @@ public class RightLeftCheckView2 extends LinearLayout {
         tvAllCompany.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                tvAllCompany.setEnabled(false);
+                tvDirectFollower.setEnabled(false);
+
                 tvAllCompany.setTextColor(ContextCompat.getColor(getContext(), R.color.common_style_white));
                 tvDirectFollower.setTextColor(ContextCompat.getColor(getContext(), R.color.common_style_black));
                 /*TranslateAnimation animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, -1,
@@ -65,14 +69,21 @@ public class RightLeftCheckView2 extends LinearLayout {
                 animation.setFillAfter(true);
                 animation.setDuration(1000);
                 ivBg.startAnimation(animation);*/
+
+                lastValue = 0;
                 ValueAnimator valueAnimator = ValueAnimator.ofInt(0, value);
-                valueAnimator.setDuration(500);
+                valueAnimator.setDuration(value);
                 valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator animation) {
                         int curValue = (int) animation.getAnimatedValue();
-                        Log.i("dragon", "curValue = " + curValue);
-                        ivBg.offsetLeftAndRight(-curValue);
+                        ivBg.offsetLeftAndRight(lastValue - curValue);
+                        lastValue = curValue;
+
+                        if (curValue == value) {
+                            tvAllCompany.setEnabled(false);
+                            tvDirectFollower.setEnabled(true);
+                        }
                     }
                 });
 
@@ -83,22 +94,35 @@ public class RightLeftCheckView2 extends LinearLayout {
         tvDirectFollower.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                tvAllCompany.setEnabled(false);
+                tvDirectFollower.setEnabled(false);
+
                 tvAllCompany.setTextColor(ContextCompat.getColor(getContext(), R.color.common_style_black));
                 tvDirectFollower.setTextColor(ContextCompat.getColor(getContext(), R.color.common_style_white));
+
                /* TranslateAnimation animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 1,
                         Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0);
                 animation.setFillAfter(true);
                 animation.setDuration(1000);
                 ivBg.startAnimation(animation);*/
 
+                lastValue = 0;
+
                 ValueAnimator valueAnimator = ValueAnimator.ofInt(0, value);
-                valueAnimator.setDuration(500);
+                valueAnimator.setDuration(value);
                 valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator animation) {
                         int curValue = (int) animation.getAnimatedValue();
-                        Log.i("dragon", "curValue = " + curValue);
-                        ivBg.offsetLeftAndRight(curValue);
+                        ivBg.offsetLeftAndRight(curValue - lastValue);
+                        lastValue = curValue;
+
+                        if (curValue == value) {
+                            tvAllCompany.setEnabled(true);
+                            tvDirectFollower.setEnabled(false);
+                        }
+
                     }
                 });
 
