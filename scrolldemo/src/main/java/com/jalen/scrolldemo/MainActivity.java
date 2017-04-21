@@ -9,6 +9,7 @@ import android.view.View;
 import com.jalen.scrolldemo.activity.LayoutActivity;
 import com.jalen.scrolldemo.activity.LayoutParamsActivity;
 import com.jalen.scrolldemo.activity.OffSetActivity;
+import com.jalen.scrolldemo.activity.ScrollByActivity;
 import com.jalen.scrolldemo.activity.ScrollToActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                                 if (which == 0) {//ScrollTo
                                     ScrollToActivity.startActivity(MainActivity.this);
                                 } else if (which == 1) {//ScrollBy
-
+                                    ScrollByActivity.startActivity(MainActivity.this);
                                 }
                             }
                         });
