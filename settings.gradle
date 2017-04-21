@@ -1,2 +1,2 @@
-include ':MaterialDesign', ':ViewDemo', ':Library_Widget', ':CanvasKnife', ':TouchEventDemo', ':AnnotationSample', ':AnimatorDemo'
+include ':MaterialDesign', ':ViewDemo', ':Library_Widget', ':CanvasKnife', ':TouchEventDemo', ':AnnotationSample', ':AnimatorDemo', ':ScrollDemo'
 
