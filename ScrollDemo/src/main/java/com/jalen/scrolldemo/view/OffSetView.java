@@ -7,24 +7,23 @@ import android.view.View;
 
 /**
  * @author Dragon
- * @date 2017/4/21. 11:24
+ * @date 2017/4/21. 11:38
  * @editor
  * @date
  * @describe
  */
-public class LayoutView extends View {
-
+public class OffSetView extends View {
     private int lastX, lastY;
 
-    public LayoutView(Context context) {
+    public OffSetView(Context context) {
         super(context);
     }
 
-    public LayoutView(Context context, AttributeSet attrs) {
+    public OffSetView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public LayoutView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public OffSetView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -40,13 +39,13 @@ public class LayoutView extends View {
             case MotionEvent.ACTION_MOVE:
                 int offsetX = x - lastX;
                 int offsetY = y - lastY;
-                //滑动的时候 getLeft getTop getRight getBottom 的值和初始值一样 不会改变
-                layout(getLeft() + offsetX, getTop() + offsetY, getRight() + offsetX, getBottom() + offsetY);
+                offsetLeftAndRight(offsetX);
+                offsetTopAndBottom(offsetY);
                 break;
             case MotionEvent.ACTION_UP:
-                //手指抬起的时候 getLeft getTop getRight getBottom 的值改变
                 break;
-
+            default:
+                break;
         }
         return true;
     }

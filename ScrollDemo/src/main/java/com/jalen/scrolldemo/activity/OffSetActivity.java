@@ -12,19 +12,19 @@ import com.jalen.scrolldemo.R;
 
 /**
  * @author Dragon
- * @date 2017/4/21. 11:21
+ * @date 2017/4/21. 11:43
  * @editor
  * @date
  * @describe
  */
-public class LayoutActivity extends AppCompatActivity {
+public class OffSetActivity extends AppCompatActivity {
 
     private ActionBar actionBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_layout);
+        setContentView(R.layout.activity_off_set);
 
         actionBar = getSupportActionBar();
         actionBar.setTitle("layout");
@@ -32,7 +32,7 @@ public class LayoutActivity extends AppCompatActivity {
     }
 
     public static void startActivity(Context context) {
-        context.startActivity(new Intent(context, LayoutActivity.class));
+        context.startActivity(new Intent(context, OffSetActivity.class));
     }
 
     @Override
