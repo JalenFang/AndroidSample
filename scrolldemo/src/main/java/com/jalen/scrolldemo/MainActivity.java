@@ -12,6 +12,7 @@ import com.jalen.scrolldemo.activity.OffSetActivity;
 import com.jalen.scrolldemo.activity.ScrollByActivity;
 import com.jalen.scrolldemo.activity.ScrollToActivity;
 import com.jalen.scrolldemo.activity.ScrollerActivity;
+import com.jalen.scrolldemo.activity.ViewDragHelperActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -68,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ScrollerActivity.startActivity(MainActivity.this);
+            }
+        });
+
+        findViewById(R.id.activity_main_btn_ViewDragHelper).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ViewDragHelperActivity.startActivity(MainActivity.this);
             }
         });
     }
