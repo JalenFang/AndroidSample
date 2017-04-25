@@ -2,27 +2,16 @@
 <com.jalen.scrolldemo.view.ViewDragHelperView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="50dp">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_margin="10dp"
-        android:layout_marginLeft="20dp"
         android:background="#44ff0000"
+        android:clickable="true"
         android:gravity="center"
-        android:text="I can be dragged !" />
-
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
-        android:background="#44ff0000"
-        android:gravity="center"
-        android:padding="10dp"
         android:text="I can be dragged !" />
 
     <TextView
@@ -31,6 +20,18 @@
         android:layout_gravity="center"
         android:layout_margin="10dp"
         android:background="#44ff0000"
+        android:clickable="true"
         android:gravity="center"
         android:text="I can be dragged !" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="#44ff0000"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="I can be dragged !" />
+
 </com.jalen.scrolldemo.view.ViewDragHelperView>
