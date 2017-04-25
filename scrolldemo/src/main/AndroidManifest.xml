@@ -20,6 +20,7 @@
         <activity android:name=".activity.LayoutParamsActivity" />
         <activity android:name=".activity.ScrollToActivity" />
         <activity android:name=".activity.ScrollByActivity" />
+        <activity android:name=".activity.ScrollerActivity" />
     </application>
 
 </manifest>

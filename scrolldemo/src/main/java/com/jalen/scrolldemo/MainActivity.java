@@ -11,6 +11,7 @@ import com.jalen.scrolldemo.activity.LayoutParamsActivity;
 import com.jalen.scrolldemo.activity.OffSetActivity;
 import com.jalen.scrolldemo.activity.ScrollByActivity;
 import com.jalen.scrolldemo.activity.ScrollToActivity;
+import com.jalen.scrolldemo.activity.ScrollerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
                         });
 
                 builder.show();
+            }
+        });
+
+        findViewById(R.id.activity_main_btn_Scroller).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ScrollerActivity.startActivity(MainActivity.this);
             }
         });
     }
