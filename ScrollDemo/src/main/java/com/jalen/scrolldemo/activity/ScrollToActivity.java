@@ -40,8 +40,8 @@ public class ScrollToActivity extends AppCompatActivity {
         findViewById(R.id.activity_scroll_to_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // ((FrameLayout) textView.getParent()).scrollTo(i, i);
-                ((FrameLayout) textView.getParent()).scrollBy(i, i);
+                ((FrameLayout) textView.getParent()).scrollTo(i, i);
+                //((FrameLayout) textView.getParent()).scrollBy(i, i);
 
                 int left = frameLayout.getLeft();
                 int top = frameLayout.getTop();

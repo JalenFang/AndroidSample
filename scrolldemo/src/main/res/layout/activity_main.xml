@@ -54,9 +54,10 @@
         android:textAllCaps="false" />
 
     <Button
+        android:id="@+id/activity_main_btn_animation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="属性动画"
+        android:text="动画"
         android:textAllCaps="false" />
 
 </LinearLayout>
