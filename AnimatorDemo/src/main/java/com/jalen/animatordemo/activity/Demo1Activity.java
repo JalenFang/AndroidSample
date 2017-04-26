@@ -57,16 +57,33 @@ public class Demo1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ValueAnimator valueAnimator = ValueAnimator.ofInt(0, 400);
+                //设置动画时长，单位是毫秒
                 valueAnimator.setDuration(2000);
                 valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator animation) {
+                        //获取ValueAnimator在运动时，当前运动点的值
                         int curValue = (int) animation.getAnimatedValue();
                         tvView.layout(curValue, curValue, curValue + tvView.getWidth(), curValue + tvView.getHeight());
                     }
                 });
 
+                //开始动画
                 valueAnimator.start();
+                /**
+                 * 设置循环次数,设置为INFINITE表示无限循环
+                 */
+                valueAnimator.setRepeatCount(ValueAnimator.INFINITE);
+                /**
+                 * 设置循环模式
+                 * value取值有RESTART，REVERSE，
+                 */
+                valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
+
+                /**
+                 * 取消动画
+                 */
+                //void cancel()
             }
         });
 
