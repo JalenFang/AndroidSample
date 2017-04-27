@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import com.jalen.viewdemo.activity.checkview.CheckViewActivity;
 import com.jalen.viewdemo.activity.custom.CustomActivity;
 import com.jalen.viewdemo.activity.linearlayout.LinearLayoutActivity;
+import com.jalen.viewdemo.activity.music.MusicMainActivity;
 import com.jalen.viewdemo.activity.viewpager.ViewPagerActivity;
 
 import butterknife.OnClick;
@@ -53,5 +54,10 @@ public class MainActivity extends BaseAtivity {
     @OnClick(R.id.activity_main_btn_check_view)
     public void clickCheckView() {
         CheckViewActivity.startActivity(getActivity());
+    }
+
+    @OnClick(R.id.activity_main_btn_music)
+    public void clickMusic() {
+        MusicMainActivity.startActivity(getActivity());
     }
 }

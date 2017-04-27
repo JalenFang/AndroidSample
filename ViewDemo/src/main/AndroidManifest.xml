@@ -22,6 +22,10 @@
         <activity android:name=".activity.custom.CustomActivity" />
         <activity android:name=".activity.custom.FolwLayoutActivity" />
         <activity android:name=".activity.checkview.CheckViewActivity" />
+
+        <activity android:name=".activity.music.MusicMainActivity" />
+        <activity android:name=".activity.music.MusciDetailActivity" />
+
     </application>
 
 </manifest>
