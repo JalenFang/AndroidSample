@@ -16,10 +16,10 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/activity_music_main_btn"
+                android:id="@+id/activity_music_detail_btn"
                 android:layout_width="300dp"
                 android:layout_height="500dp"
-                android:text="哈哈哈" />
+                android:text="详情页Deatil" />
 
             <TextView
                 android:layout_width="100dp"

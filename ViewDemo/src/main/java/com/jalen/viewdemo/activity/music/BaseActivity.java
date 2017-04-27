@@ -67,4 +67,12 @@ public class BaseActivity extends AppCompatActivity {
         super.finish();
         overridePendingTransition(0, 0);
     }
+
+    public void setVisibility(boolean isVisibile) {
+        if (isVisibile) {
+            mFloatView.setVisibility(View.VISIBLE);
+        } else {
+            mFloatView.setVisibility(View.GONE);
+        }
+    }
 }

@@ -24,6 +24,7 @@ public class MusicMainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 MusciDetailActivity.startActivity(MusicMainActivity.this);
+                setVisibility(false);
             }
         });
     }
