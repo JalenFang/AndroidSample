@@ -15,11 +15,11 @@ import butterknife.ButterKnife;
  * @describe
  */
 public abstract class BaseAtivity extends AppCompatActivity {
-    public abstract void initUI(@Nullable Bundle savedInstanceState);
-
     public abstract Activity getActivity();
 
     public abstract int getLayout();
+
+    public abstract void initUI(@Nullable Bundle savedInstanceState);
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

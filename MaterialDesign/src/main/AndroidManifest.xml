@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ToolBar_CoordinatorLayout_TabLayout_ViewPager_RecyclerView_Activity" />
+
     </application>
 
 </manifest>
