@@ -3,10 +3,13 @@ package com.jalen.materialdesign.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.jalen.materialdesign.R;
 
 /**
  * @author Dragon
@@ -16,11 +19,14 @@ import android.widget.TextView;
  * @describe
  */
 public class Fragment3 extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         TextView textView = new TextView(getContext());
         textView.setText("3");
+        textView.setTextColor(ContextCompat.getColor(getContext(), R.color.common_style_black));
         return textView;
     }
+
 }
