@@ -6,17 +6,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.design.widget.AppBarLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_test_toolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:background="@color/colorPrimary"
+        toolbar:titleTextColor="@color/white" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/activity_test_toolBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            toolbar:titleTextColor="@color/white" />
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
 
         <ImageView
             android:layout_width="match_parent"
@@ -24,6 +26,14 @@
             android:scaleType="centerCrop"
             android:src="@mipmap/mine_bg"
             app:layout_scrollFlags="scroll|enterAlways" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.design.widget.TabLayout
             android:id="@+id/activity_test_tabLayout"
@@ -36,14 +46,12 @@
             app:tabSelectedTextColor="@color/common_style_blue"
             app:tabTextColor="@color/common_style_black" />
 
-    </android.support.design.widget.AppBarLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_test_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/activity_test_viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>
