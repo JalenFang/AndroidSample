@@ -18,6 +18,7 @@
 
 
         <activity android:name=".activity.TestActivity" />
+        <activity android:name=".activity.toolbar.ToolbarActivity" />
 
     </application>
 

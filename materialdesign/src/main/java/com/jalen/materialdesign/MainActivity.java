@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.jalen.materialdesign.activity.TestActivity;
+import com.jalen.materialdesign.activity.toolbar.ToolbarActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickToolbarBasicUse(View v) {
-        startActivity(TestActivity.class);
+        startActivity(ToolbarActivity.class);
     }
 
     public void onClickTabLayoutBottom(View v) {

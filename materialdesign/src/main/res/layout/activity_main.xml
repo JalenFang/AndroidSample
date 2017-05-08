@@ -64,7 +64,6 @@
                         android:textAllCaps="false" />
 
                     <Button
-                        android:id="@+id/btn_tab_bottom"
                         style="?borderlessButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
