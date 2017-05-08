@@ -19,8 +19,8 @@
 
         <activity android:name=".activity.TestActivity" />
         <activity android:name=".activity.toolbar.ToolbarActivity" />
-        <activity android:name=".activity.snackbar.SnackbarActivity"
-            android:label="@string/Snackbar"/>
+        <activity android:name=".activity.snackbar.SnackbarActivity" />
+        <activity android:name=".activity.floatingactionbutton.FloatingActionButtonActivity" />
 
     </application>
 

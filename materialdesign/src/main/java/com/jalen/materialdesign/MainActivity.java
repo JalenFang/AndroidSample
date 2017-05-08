@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.jalen.materialdesign.activity.floatingactionbutton.FloatingActionButtonActivity;
 import com.jalen.materialdesign.activity.snackbar.SnackbarActivity;
 import com.jalen.materialdesign.activity.toolbar.ToolbarActivity;
 
@@ -22,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickSnackbar(View v) {
         startActivity(SnackbarActivity.class);
+    }
+
+    public void onClickFloatingActionButton(View v) {
+        startActivity(FloatingActionButtonActivity.class);
     }
 
     public void onClickTabLayoutBottom(View v) {
