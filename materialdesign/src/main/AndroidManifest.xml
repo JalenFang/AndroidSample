@@ -16,11 +16,10 @@
             </intent-filter>
         </activity>
 
-
-        <activity android:name=".activity.TestActivity" />
         <activity android:name=".activity.toolbar.ToolbarActivity" />
         <activity android:name=".activity.snackbar.SnackbarActivity" />
         <activity android:name=".activity.floatingactionbutton.FloatingActionButtonActivity" />
+        <activity android:name=".activity.appbar.AppBarLayoutActivity" />
 
     </application>
 

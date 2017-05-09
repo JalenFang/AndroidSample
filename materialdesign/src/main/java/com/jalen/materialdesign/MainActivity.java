@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.jalen.materialdesign.activity.appbar.AppBarLayoutActivity;
 import com.jalen.materialdesign.activity.floatingactionbutton.FloatingActionButtonActivity;
 import com.jalen.materialdesign.activity.snackbar.SnackbarActivity;
 import com.jalen.materialdesign.activity.toolbar.ToolbarActivity;
@@ -29,24 +30,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(FloatingActionButtonActivity.class);
     }
 
-    public void onClickAppBarLayoutScroll(View v) {
-
-    }
-
-    public void onClickAppBarLayoutEnterAlways(View v) {
-
-    }
-
-    public void onClickAppBarLayoutEnterAlwaysCollapsed(View v) {
-
-    }
-
-    public void onClickAppBarLayoutSnap(View v) {
-
-    }
-
-    public void onClickAppBarLayoutExitUntilCollapsed(View v) {
-
+    public void onClickAppBarLayout(View v) {
+        startActivity(AppBarLayoutActivity.class);
     }
 
     public void onClickTabLayoutBottom(View v) {
