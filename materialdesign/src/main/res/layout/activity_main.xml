@@ -166,7 +166,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/shape_circle_green"
                         android:gravity="center"
-                        android:text="Tab"
+                        android:text="AppBar"
                         android:textColor="@color/white" />
 
                     <Button
@@ -176,11 +176,12 @@
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/tv_3"
                         android:gravity="left|center_vertical"
-                        android:onClick="onClickTabLayoutTop"
-                        android:text="TabLayout 顶部标签页"
+                        android:onClick="onClickAppBarLayoutScroll"
+                        android:text="AppBarLayout scroll"
                         android:textAllCaps="false" />
 
                     <Button
+                        android:id="@+id/btn_3_2"
                         style="?borderlessButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -188,8 +189,47 @@
                         android:layout_below="@id/tv_3"
                         android:layout_toRightOf="@id/tv_3"
                         android:gravity="left|center_vertical"
-                        android:onClick="onClickTabLayoutBottom"
-                        android:text="TabLayout 底部菜单页"
+                        android:onClick="onClickAppBarLayoutEnterAlways"
+                        android:text="AppBarLayout enterAlways"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btn_3_3"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/btn_3"
+                        android:layout_below="@id/btn_3_2"
+                        android:layout_toRightOf="@id/tv_3"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickAppBarLayoutEnterAlwaysCollapsed"
+                        android:text="AppBarLayout enterAlwaysCollapsed"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btn_3_4"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/btn_3"
+                        android:layout_below="@id/btn_3_3"
+                        android:layout_toRightOf="@id/tv_3"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickAppBarLayoutSnap"
+                        android:text="AppBarLayout snap"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btn_3_5"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/btn_3"
+                        android:layout_below="@id/btn_3_4"
+                        android:layout_toRightOf="@id/tv_3"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickAppBarLayoutExitUntilCollapsed"
+                        android:text="AppBarLayout exitUntilCollapsed"
                         android:textAllCaps="false" />
 
                 </RelativeLayout>

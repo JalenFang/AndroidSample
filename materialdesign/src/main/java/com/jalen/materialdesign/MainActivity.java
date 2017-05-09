@@ -29,6 +29,26 @@ public class MainActivity extends AppCompatActivity {
         startActivity(FloatingActionButtonActivity.class);
     }
 
+    public void onClickAppBarLayoutScroll(View v) {
+
+    }
+
+    public void onClickAppBarLayoutEnterAlways(View v) {
+
+    }
+
+    public void onClickAppBarLayoutEnterAlwaysCollapsed(View v) {
+
+    }
+
+    public void onClickAppBarLayoutSnap(View v) {
+
+    }
+
+    public void onClickAppBarLayoutExitUntilCollapsed(View v) {
+
+    }
+
     public void onClickTabLayoutBottom(View v) {
 
     }
