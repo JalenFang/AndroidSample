@@ -6,7 +6,6 @@ import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.jalen.materialdesign.R;
 
@@ -69,7 +68,6 @@ public class RecyclerViewAdapter extends Adapter<ViewHolder> {
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         if (holder instanceof ItemViewHolder) {
-            //holder.tv.setText(data.get(position));
             if (onItemClickListener != null) {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -94,11 +92,8 @@ public class RecyclerViewAdapter extends Adapter<ViewHolder> {
 
     static class ItemViewHolder extends ViewHolder {
 
-        TextView tv;
-
         public ItemViewHolder(View view) {
             super(view);
-            tv = (TextView) view.findViewById(R.id.tv_date);
         }
     }
 

@@ -3,12 +3,19 @@ package com.jalen.materialdesign.activity.appbar;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.jalen.materialdesign.R;
+import com.jalen.materialdesign.adapter.RecyclerViewAdapter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Dragon
@@ -21,6 +28,10 @@ public class AppBarLayoutActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
 
+    private List<Map<String, Object>> data = new ArrayList<>();
+    boolean isLoading;
+    private RecyclerViewAdapter adapter;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +42,46 @@ public class AppBarLayoutActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        setData();
         recyclerView = (RecyclerView) findViewById(R.id.activity_appbar_layout_recyclerView);
+        initRecyclerView();
+    }
+
+    private void setData() {
+        for (int i = 0; i < 20; i++) {
+            Map<String, Object> map = new HashMap<>();
+            data.add(map);
+        }
+    }
+
+    private void initRecyclerView() {
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(AppBarLayoutActivity.this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        adapter = new RecyclerViewAdapter(AppBarLayoutActivity.this, data);
+        recyclerView.setAdapter(adapter);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+
+                int lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition();
+                if (lastVisibleItemPosition + 1 == adapter.getItemCount()) {
+                    if (!isLoading) {
+                        isLoading = true;
+                        setData();
+                        adapter.notifyDataSetChanged();
+                        adapter.notifyItemRemoved(adapter.getItemCount());
+                        isLoading = false;
+                    }
+                }
+            }
+        });
     }
 
     @Override
