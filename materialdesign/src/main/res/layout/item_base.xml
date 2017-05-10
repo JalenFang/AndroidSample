@@ -4,6 +4,8 @@
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
     cardview:cardBackgroundColor="@color/common_style_white"
     cardview:cardCornerRadius="@dimen/card_view_corner_radius"
     cardview:cardPreventCornerOverlap="true"
@@ -11,6 +13,7 @@
     cardview:contentPadding="@dimen/card_view_content_padding">
 
     <TextView
+        android:id="@+id/item_base_tv"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:ellipsize="end"

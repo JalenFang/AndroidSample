@@ -1,7 +1,9 @@
 package com.jalen.materialdesign.activity.appbar;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.design.widget.AppBarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -31,13 +33,14 @@ public class AppBarLayoutActivity extends AppCompatActivity {
     private List<Map<String, Object>> data = new ArrayList<>();
     boolean isLoading;
     private RecyclerViewAdapter adapter;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appbar_layout);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.activity_appbar_layout_toolbar);
+        toolbar = (Toolbar) findViewById(R.id.activity_appbar_layout_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -74,10 +77,15 @@ public class AppBarLayoutActivity extends AppCompatActivity {
                 if (lastVisibleItemPosition + 1 == adapter.getItemCount()) {
                     if (!isLoading) {
                         isLoading = true;
-                        setData();
-                        adapter.notifyDataSetChanged();
-                        adapter.notifyItemRemoved(adapter.getItemCount());
-                        isLoading = false;
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                setData();
+                                adapter.notifyDataSetChanged();
+                                adapter.notifyItemRemoved(adapter.getItemCount());
+                                isLoading = false;
+                            }
+                        }, 1000);
                     }
                 }
             }
@@ -97,19 +105,24 @@ public class AppBarLayoutActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.app_bar_layout_menu_scorll:
-                finish();
+                AppBarLayout.LayoutParams param1 = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+                param1.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL);
                 break;
             case R.id.app_bar_layout_menu_enterAlways:
-                finish();
+                AppBarLayout.LayoutParams param2 = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+                param2.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS);
                 break;
             case R.id.app_bar_layout_menu_enterAlwaysCollapsed:
-                finish();
+                AppBarLayout.LayoutParams param3 = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+                param3.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS_COLLAPSED);
                 break;
             case R.id.app_bar_layout_menu_snap:
-                finish();
+                AppBarLayout.LayoutParams param4 = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+                param4.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP);
                 break;
             case R.id.app_bar_layout_menu_exitUntilCollapsed:
-                finish();
+                AppBarLayout.LayoutParams param5 = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+                param5.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_EXIT_UNTIL_COLLAPSED);
                 break;
             default:
                 break;

@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.jalen.materialdesign.R;
 
@@ -68,32 +69,39 @@ public class RecyclerViewAdapter extends Adapter<ViewHolder> {
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         if (holder instanceof ItemViewHolder) {
-            if (onItemClickListener != null) {
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        int position = holder.getLayoutPosition();
+            ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
+            itemViewHolder.tv.setText("RecyclerView Item" + position);
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = holder.getLayoutPosition();
+                    if (onItemClickListener != null) {
                         onItemClickListener.onItemClick(holder.itemView, position);
                     }
-                });
+                }
+            });
 
-                holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
-                        int position = holder.getLayoutPosition();
+            holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    int position = holder.getLayoutPosition();
+                    if (onItemClickListener != null) {
                         onItemClickListener.onItemLongClick(holder.itemView, position);
-                        return false;
                     }
-                });
-            }
+                    return false;
+                }
+            });
         }
+
     }
 
 
     static class ItemViewHolder extends ViewHolder {
+        TextView tv;
 
         public ItemViewHolder(View view) {
             super(view);
+            tv = (TextView) view.findViewById(R.id.item_base_tv);
         }
     }
 
