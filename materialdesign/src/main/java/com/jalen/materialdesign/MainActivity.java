@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.jalen.materialdesign.activity.appbar.AppBarLayoutActivity;
+import com.jalen.materialdesign.activity.dialog.BottomSheetDialogActivity;
 import com.jalen.materialdesign.activity.floatingactionbutton.FloatingActionButtonActivity;
 import com.jalen.materialdesign.activity.snackbar.SnackbarActivity;
 import com.jalen.materialdesign.activity.toolbar.ToolbarActivity;
@@ -79,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onClickBottomSheetDialog(View v) {
+        startActivity(BottomSheetDialogActivity.class);
+    }
+
     public void onClickTabLayoutBottom(View v) {
 
     }
@@ -86,5 +91,6 @@ public class MainActivity extends AppCompatActivity {
     private void startActivity(Class<?> c) {
         startActivity(new Intent(this, c));
     }
+
 }
 

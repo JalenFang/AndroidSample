@@ -20,6 +20,7 @@
         <activity android:name=".activity.snackbar.SnackbarActivity" />
         <activity android:name=".activity.floatingactionbutton.FloatingActionButtonActivity" />
         <activity android:name=".activity.appbar.AppBarLayoutActivity" />
+        <activity android:name=".activity.dialog.BottomSheetDialogActivity" />
 
     </application>
 
