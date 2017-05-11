@@ -11,6 +11,10 @@
         <item>enterAlwaysCollapsed</item>
         <item>snap</item>
         <item>exitUntilCollapsed</item>
+        <item>scroll_enterAlways</item>
+        <item>scroll_enterAlways_enterAlwaysCollapsed</item>
+        <item>scroll_exitUntilCollapsed</item>
+        <item>scroll_snap</item>
     </string-array>
 
     <string-array name="title">

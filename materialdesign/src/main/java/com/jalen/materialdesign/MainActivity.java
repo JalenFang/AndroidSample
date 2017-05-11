@@ -56,6 +56,18 @@ public class MainActivity extends AppCompatActivity {
                             case 4:
                                 intent.putExtra(AppBarLayoutActivity.SCROLL_FLAG, "exitUntilCollapsed");
                                 break;
+                            case 5:
+                                intent.putExtra(AppBarLayoutActivity.SCROLL_FLAG, "scroll_enterAlways");
+                                break;
+                            case 6:
+                                intent.putExtra(AppBarLayoutActivity.SCROLL_FLAG, "scroll_enterAlways_enterAlwaysCollapsed");
+                                break;
+                            case 7:
+                                intent.putExtra(AppBarLayoutActivity.SCROLL_FLAG, "scroll_exitUntilCollapsed");
+                                break;
+                            case 8:
+                                intent.putExtra(AppBarLayoutActivity.SCROLL_FLAG, "scroll_snap");
+                                break;
                             default:
                                 break;
 
