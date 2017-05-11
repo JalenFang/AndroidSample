@@ -1,7 +1,9 @@
 package com.jalen.materialdesign;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -31,7 +33,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickAppBarLayout(View v) {
-        startActivity(AppBarLayoutActivity.class);
+        new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.select_scroll_flag))
+                .setItems(R.array.array_scroll_flag, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        Intent intent = new Intent(getApplicationContext(), AppBarLayoutActivity.class);
+                        switch (which) {
+                            case 0:
+                                intent.putExtra(AppBarLayoutActivity.SCROLL_FLAG, "scroll");
+                                break;
+                            case 1:
+                                intent.putExtra(AppBarLayoutActivity.SCROLL_FLAG, "enterAlways");
+                                break;
+                            case 2:
+                                intent.putExtra(AppBarLayoutActivity.SCROLL_FLAG, "enterAlwaysCollapsed");
+                                break;
+                            case 3:
+                                intent.putExtra(AppBarLayoutActivity.SCROLL_FLAG, "snap");
+                                break;
+                            case 4:
+                                intent.putExtra(AppBarLayoutActivity.SCROLL_FLAG, "exitUntilCollapsed");
+                                break;
+                            default:
+                                break;
+
+                        }
+                        startActivity(intent);
+                    }
+                })
+                .show();
+
     }
 
     public void onClickTabLayoutBottom(View v) {

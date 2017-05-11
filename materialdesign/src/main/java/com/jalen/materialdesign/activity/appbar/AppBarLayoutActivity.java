@@ -29,25 +29,50 @@ import java.util.Map;
 public class AppBarLayoutActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+    private AppBarLayout appBarLayout;
 
     private List<Map<String, Object>> data = new ArrayList<>();
     boolean isLoading;
     private RecyclerViewAdapter adapter;
     private Toolbar toolbar;
 
+    public static final String SCROLL_FLAG = "scroll_flag";
+    private String scrollFlag;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appbar_layout);
+
+        scrollFlag = getIntent().getStringExtra(SCROLL_FLAG);
+
+        appBarLayout = (AppBarLayout) findViewById(R.id.activity_appbar_layout_appBarLayout);
 
         toolbar = (Toolbar) findViewById(R.id.activity_appbar_layout_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        setScrollFlag();
+
         setData();
         recyclerView = (RecyclerView) findViewById(R.id.activity_appbar_layout_recyclerView);
         initRecyclerView();
+    }
+
+    private void setScrollFlag() {
+        AppBarLayout.LayoutParams param = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+        if (scrollFlag.equals("scroll")) {
+            param.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL);
+        } else if (scrollFlag.equals("enterAlways")) {
+            param.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS);
+        } else if (scrollFlag.equals("enterAlwaysCollapsed")) {
+            param.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS_COLLAPSED);
+        } else if (scrollFlag.equals("snap")) {
+            param.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP);
+        } else if (scrollFlag.equals("exitUntilCollapsed")) {
+            param.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_EXIT_UNTIL_COLLAPSED);
+        }
     }
 
     private void setData() {
@@ -94,7 +119,7 @@ public class AppBarLayoutActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.app_bar_layout_menu, menu);
+        //getMenuInflater().inflate(R.menu.app_bar_layout_menu, menu);
         return true;
     }
 
