@@ -12,6 +12,7 @@ import com.jalen.materialdesign.activity.dialog.BottomSheetDialogActivity;
 import com.jalen.materialdesign.activity.floatingactionbutton.FloatingActionButtonActivity;
 import com.jalen.materialdesign.activity.snackbar.SnackbarActivity;
 import com.jalen.materialdesign.activity.tab.TabLayoutBottomActivity;
+import com.jalen.materialdesign.activity.tab.TabLayoutTopActivity;
 import com.jalen.materialdesign.activity.toolbar.ToolbarActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickTabLayoutTop(View v) {
-
+        startActivity(TabLayoutTopActivity.class);
     }
 
     public void onClickTabLayoutBottom(View v) {

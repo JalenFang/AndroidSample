@@ -10,8 +10,8 @@ import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.jalen.materialdesign.R;
 import com.jalen.materialdesign.fragment.FragmentFactory;
@@ -21,32 +21,63 @@ import java.util.List;
 
 /**
  * @author Dragon
- * @date 2017/5/12. 9:53
+ * @date 2017/5/12. 10:56
  * @editor
  * @date
  * @describe
  */
-public class TabLayoutBottomActivity extends AppCompatActivity {
+public class TabLayoutTopActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private static final int TAB_COUNT = 5;
+    private static final int TAB_COUNT = 3;
     private List<String> cotentList;
     private List<Fragment> fragmentList;
+    private ViewPagerAdapter viewPagerAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab_layout_bottom);
+        setContentView(R.layout.activity_tab_layout_top);
 
-        toolbar = (Toolbar) findViewById(R.id.activity_tab_layout_bottom_toolbar);
-        viewPager = (ViewPager) findViewById(R.id.activity_tab_layout_bottom_viewPager);
-        tabLayout = (TabLayout) findViewById(R.id.activity_tab_layout_bottom_tabLayout);
+        toolbar = (Toolbar) findViewById(R.id.activity_tab_layout_top_toolbar);
+        viewPager = (ViewPager) findViewById(R.id.activity_tab_layout_top_viewPager);
+        tabLayout = (TabLayout) findViewById(R.id.activity_tab_layout_top_tabLayout);
 
         initToolbar();
         initViewPager();
         initTabLayout();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tab_layout_top_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+            case R.id.tab_layout_top_menu_MODE_FIXED:
+                tabLayout.setTabMode(TabLayout.MODE_FIXED);
+                break;
+            case R.id.tab_layout_top_menu_MODE_SCROLLABLE:
+                tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+                break;
+            case R.id.tab_layout_top_menu_add:
+                cotentList.add("Tab " + cotentList.size());
+                fragmentList.add(FragmentFactory.newInstant(cotentList.get(cotentList.size()-1)));
+                viewPagerAdapter.notifyDataSetChanged();
+                tabLayout.setupWithViewPager(viewPager);
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void initToolbar() {
@@ -65,7 +96,7 @@ public class TabLayoutBottomActivity extends AppCompatActivity {
             fragmentList.add(FragmentFactory.newInstant(cotentList.get(i)));
         }
 
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
     }
 
@@ -73,19 +104,15 @@ public class TabLayoutBottomActivity extends AppCompatActivity {
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         ViewCompat.setElevation(tabLayout, 90);
         tabLayout.setupWithViewPager(viewPager);//这个很重要 tab的数量和viewpager的数量一样了
-        tabLayout.setSelectedTabIndicatorHeight(0);
 
         for (int i = 0; i < TAB_COUNT; i++) {
             TabLayout.Tab tabAt = tabLayout.getTabAt(i);
             if (tabAt != null) {
-                tabAt.setCustomView(R.layout.item_tab_layout_custom);
-                TextView itemTv = (TextView) tabAt.getCustomView().findViewById(R.id.tv_menu_item);
-                itemTv.setText(cotentList.get(i));
+                tabAt.setText(cotentList.get(i));
             }
         }
 
-        // tabLayout.getTabAt(0).select();
-        tabLayout.getTabAt(0).getCustomView().setSelected(true);
+        tabLayout.getTabAt(0).select();
     }
 
     private class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -103,18 +130,10 @@ public class TabLayoutBottomActivity extends AppCompatActivity {
         public int getCount() {
             return fragmentList.size();
         }
-    }
 
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                break;
-            default:
-                break;
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return cotentList.get(position);
         }
-        return super.onOptionsItemSelected(item);
     }
 }
