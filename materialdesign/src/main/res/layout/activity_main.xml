@@ -297,7 +297,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/shape_circle_green"
                         android:gravity="center"
-                        android:text="Tab"
+                        android:text="Recycler"
                         android:textColor="@color/white" />
 
                     <Button
@@ -307,20 +307,8 @@
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/tv_6"
                         android:gravity="left|center_vertical"
-                        android:onClick="onClickTabLayoutTop"
-                        android:text="TabLayout 顶部标签页"
-                        android:textAllCaps="false" />
-
-                    <Button
-                        style="?borderlessButtonStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/btn_6"
-                        android:layout_below="@id/tv_6"
-                        android:layout_toRightOf="@id/tv_6"
-                        android:gravity="left|center_vertical"
-                        android:onClick="onClickTabLayoutBottom"
-                        android:text="TabLayout 底部菜单页"
+                        android:onClick="onClickRecyclerViewLinear"
+                        android:text="RecyclerView Linear"
                         android:textAllCaps="false" />
 
                 </RelativeLayout>
@@ -349,7 +337,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/shape_circle_green"
                         android:gravity="center"
-                        android:text="Tab"
+                        android:text="Drawer"
                         android:textColor="@color/white" />
 
                     <Button
@@ -359,23 +347,12 @@
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/tv_7"
                         android:gravity="left|center_vertical"
-                        android:onClick="onClickTabLayoutTop"
-                        android:text="TabLayout 顶部标签页"
-                        android:textAllCaps="false" />
-
-                    <Button
-                        style="?borderlessButtonStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/btn_7"
-                        android:layout_below="@id/tv_7"
-                        android:layout_toRightOf="@id/tv_7"
-                        android:gravity="left|center_vertical"
-                        android:onClick="onClickTabLayoutBottom"
-                        android:text="TabLayout 底部菜单页"
+                        android:onClick="onClickDrawerLayout"
+                        android:text="DrawerLayout的基本使用"
                         android:textAllCaps="false" />
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
         </LinearLayout>

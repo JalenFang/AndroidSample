@@ -94,6 +94,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(TabLayoutBottomActivity.class);
     }
 
+    public void onClickRecyclerViewLinear(View v) {
+    }
+
+    public void onClickDrawerLayout(View v) {
+    }
+
     private void startActivity(Class<?> c) {
         startActivity(new Intent(this, c));
     }
