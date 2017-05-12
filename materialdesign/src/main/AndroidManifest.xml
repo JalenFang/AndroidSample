@@ -23,6 +23,7 @@
         <activity android:name=".activity.dialog.BottomSheetDialogActivity" />
         <activity android:name=".activity.tab.TabLayoutBottomActivity" />
         <activity android:name=".activity.tab.TabLayoutTopActivity" />
+        <activity android:name=".activity.drawer.DrawerLayoutActivity" />
 
     </application>
 

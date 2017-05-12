@@ -14,7 +14,7 @@ public class RecyclerViewAdapter2 extends Adapter<ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 10;
+        return 20;
     }
 
     @Override

@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.jalen.materialdesign.activity.appbar.AppBarLayoutActivity;
 import com.jalen.materialdesign.activity.dialog.BottomSheetDialogActivity;
+import com.jalen.materialdesign.activity.drawer.DrawerLayoutActivity;
 import com.jalen.materialdesign.activity.floatingactionbutton.FloatingActionButtonActivity;
 import com.jalen.materialdesign.activity.snackbar.SnackbarActivity;
 import com.jalen.materialdesign.activity.tab.TabLayoutBottomActivity;
@@ -98,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickDrawerLayout(View v) {
+        startActivity(DrawerLayoutActivity.class);
     }
 
     private void startActivity(Class<?> c) {
