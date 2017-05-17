@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_drawer_layout_animation_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/common_style_blue"
+        android:theme="@style/Theme.Drawer.ArrowAnimation"
+        app:title="Drawer"
+        app:titleTextAppearance="@style/ToolBar.Base.Title" />
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/activity_drawer_layout_animation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@color/common_style_white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Drawer"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</LinearLayout>

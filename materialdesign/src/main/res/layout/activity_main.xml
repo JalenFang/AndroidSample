@@ -347,8 +347,19 @@
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/tv_7"
                         android:gravity="left|center_vertical"
-                        android:onClick="onClickDrawerLayout"
+                        android:onClick="onClickDrawerLayoutSimple"
                         android:text="DrawerLayout的基本使用"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_7"
+                        android:layout_toRightOf="@+id/tv_7"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickDrawerLayoutAnimation"
+                        android:text="DrawerLayout的title动画"
                         android:textAllCaps="false" />
 
                 </RelativeLayout>

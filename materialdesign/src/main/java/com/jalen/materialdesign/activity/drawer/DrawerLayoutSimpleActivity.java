@@ -23,7 +23,7 @@ import com.jalen.materialdesign.adapter.RecyclerViewAdapter2;
  * @date
  * @describe
  */
-public class DrawerLayoutActivity extends AppCompatActivity {
+public class DrawerLayoutSimpleActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private DrawerLayout drawerLayout;

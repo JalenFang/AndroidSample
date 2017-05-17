@@ -30,4 +30,7 @@
     <string name="item_01">Item 1</string>
     <string name="item_02">Item 2</string>
 
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
 </resources>
