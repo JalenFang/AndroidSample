@@ -12,6 +12,7 @@ import com.jalen.materialdesign.activity.dialog.BottomSheetDialogActivity;
 import com.jalen.materialdesign.activity.drawer.DrawerLayoutAnimationActivity;
 import com.jalen.materialdesign.activity.drawer.DrawerLayoutSimpleActivity;
 import com.jalen.materialdesign.activity.floatingactionbutton.FloatingActionButtonActivity;
+import com.jalen.materialdesign.activity.recyclerview.GridActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearHorizantalActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearVerticalActivity;
 import com.jalen.materialdesign.activity.recyclerview.StaggeredActivity;
@@ -110,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickRecyclerViewStaggered(View v) {
         startActivity(StaggeredActivity.class);
+    }
+
+    public void onClickRecyclerViewGrid(View v) {
+        startActivity(GridActivity.class);
     }
 
     public void onClickDrawerLayoutSimple(View v) {
