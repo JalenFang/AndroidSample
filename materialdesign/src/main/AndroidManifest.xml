@@ -26,6 +26,7 @@
         <activity android:name=".activity.drawer.DrawerLayoutSimpleActivity" />
         <activity android:name=".activity.drawer.DrawerLayoutAnimationActivity" />
         <activity android:name=".activity.refresh.SwipeRefreshLayoutActivity" />
+        <activity android:name=".activity.recyclerview.LinearVerticalActivity" />
 
     </application>
 

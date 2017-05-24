@@ -307,8 +307,8 @@
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/tv_6"
                         android:gravity="left|center_vertical"
-                        android:onClick="onClickRecyclerViewLinear"
-                        android:text="RecyclerView Linear"
+                        android:onClick="onClickRecyclerViewLinearVertical"
+                        android:text="RecyclerView Linear Vertical"
                         android:textAllCaps="false" />
 
                 </RelativeLayout>
