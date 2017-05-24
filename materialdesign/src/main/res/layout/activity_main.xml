@@ -312,6 +312,7 @@
                         android:textAllCaps="false" />
 
                     <Button
+                        android:id="@+id/btn_6_Linear_Horizantal"
                         style="?borderlessButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -320,6 +321,17 @@
                         android:gravity="left|center_vertical"
                         android:onClick="onClickRecyclerViewLinearHorizantal"
                         android:text="RecyclerView Linear Horizantal"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn_6_Linear_Horizantal"
+                        android:layout_toRightOf="@+id/tv_6"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickRecyclerViewStaggered"
+                        android:text="RecyclerView Staggered"
                         android:textAllCaps="false" />
 
                 </RelativeLayout>

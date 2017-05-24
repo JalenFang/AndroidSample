@@ -14,6 +14,7 @@ import com.jalen.materialdesign.activity.drawer.DrawerLayoutSimpleActivity;
 import com.jalen.materialdesign.activity.floatingactionbutton.FloatingActionButtonActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearHorizantalActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearVerticalActivity;
+import com.jalen.materialdesign.activity.recyclerview.StaggeredActivity;
 import com.jalen.materialdesign.activity.refresh.SwipeRefreshLayoutActivity;
 import com.jalen.materialdesign.activity.snackbar.SnackbarActivity;
 import com.jalen.materialdesign.activity.tab.TabLayoutBottomActivity;
@@ -105,6 +106,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickRecyclerViewLinearHorizantal(View v) {
         startActivity(LinearHorizantalActivity.class);
+    }
+
+    public void onClickRecyclerViewStaggered(View v) {
+        startActivity(StaggeredActivity.class);
     }
 
     public void onClickDrawerLayoutSimple(View v) {
