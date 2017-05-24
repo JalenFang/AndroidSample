@@ -12,6 +12,7 @@ import com.jalen.materialdesign.activity.dialog.BottomSheetDialogActivity;
 import com.jalen.materialdesign.activity.drawer.DrawerLayoutAnimationActivity;
 import com.jalen.materialdesign.activity.drawer.DrawerLayoutSimpleActivity;
 import com.jalen.materialdesign.activity.floatingactionbutton.FloatingActionButtonActivity;
+import com.jalen.materialdesign.activity.refresh.SwipeRefreshLayoutActivity;
 import com.jalen.materialdesign.activity.snackbar.SnackbarActivity;
 import com.jalen.materialdesign.activity.tab.TabLayoutBottomActivity;
 import com.jalen.materialdesign.activity.tab.TabLayoutTopActivity;
@@ -105,6 +106,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickDrawerLayoutAnimation(View v) {
         startActivity(DrawerLayoutAnimationActivity.class);
+    }
+
+    public void onClickSwipeRefreshLayout(View v) {
+        startActivity(SwipeRefreshLayoutActivity.class);
     }
 
     private void startActivity(Class<?> c) {
