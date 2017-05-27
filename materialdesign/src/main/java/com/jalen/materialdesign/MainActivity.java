@@ -117,6 +117,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(GridActivity.class);
     }
 
+    public void onClickRecyclerViewAnimation(View v) {
+
+    }
+
+    public void onClickSearchView(View v) {
+
+    }
+
+    public void onClickTextInputLayout(View v) {
+
+    }
+
     public void onClickDrawerLayoutSimple(View v) {
         startActivity(DrawerLayoutSimpleActivity.class);
     }

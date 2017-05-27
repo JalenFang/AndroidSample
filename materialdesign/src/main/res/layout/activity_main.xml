@@ -336,6 +336,7 @@
                         android:textAllCaps="false" />
 
                     <Button
+                        android:id="@+id/btn_6_Grid"
                         style="?borderlessButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -344,6 +345,18 @@
                         android:gravity="left|center_vertical"
                         android:onClick="onClickRecyclerViewGrid"
                         android:text="RecyclerView Grid"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btn_6_animation"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn_6_Staggered"
+                        android:layout_toRightOf="@+id/tv_6"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickRecyclerViewAnimation"
+                        android:text="RecyclerView animation"
                         android:textAllCaps="false" />
 
                 </RelativeLayout>
@@ -433,6 +446,87 @@
                         android:gravity="left|center_vertical"
                         android:onClick="onClickDrawerLayoutAnimation"
                         android:text="DrawerLayout的title动画"
+                        android:textAllCaps="false" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                cardview:cardBackgroundColor="@color/common_style_white"
+                cardview:cardCornerRadius="@dimen/card_view_corner_radius"
+                cardview:cardElevation="@dimen/card_view_elevation"
+                cardview:cardMaxElevation="@dimen/card_view_max_elevation"
+                cardview:cardPreventCornerOverlap="true"
+                cardview:cardUseCompatPadding="true"
+                cardview:contentPadding="@dimen/card_view_content_padding">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_circle_green"
+                        android:gravity="center"
+                        android:text="Search"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btn_8"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_8"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickSearchView"
+                        android:text="SearchView的基本使用"
+                        android:textAllCaps="false" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                cardview:cardBackgroundColor="@color/common_style_white"
+                cardview:cardCornerRadius="@dimen/card_view_corner_radius"
+                cardview:cardElevation="@dimen/card_view_elevation"
+                cardview:cardMaxElevation="@dimen/card_view_max_elevation"
+                cardview:cardPreventCornerOverlap="true"
+                cardview:cardUseCompatPadding="true"
+                cardview:contentPadding="@dimen/card_view_content_padding">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_circle_green"
+                        android:gravity="center"
+                        android:text="Input"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btn_9"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_9"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickTextInputLayout"
+                        android:text="TextInputLayout的基本使用"
                         android:textAllCaps="false" />
 
                 </RelativeLayout>
