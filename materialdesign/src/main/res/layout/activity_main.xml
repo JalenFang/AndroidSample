@@ -352,7 +352,7 @@
                         style="?borderlessButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/btn_6_Staggered"
+                        android:layout_below="@id/btn_6_Grid"
                         android:layout_toRightOf="@+id/tv_6"
                         android:gravity="left|center_vertical"
                         android:onClick="onClickRecyclerViewAnimation"
