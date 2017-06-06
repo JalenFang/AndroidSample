@@ -18,9 +18,13 @@ public class CircleRingView extends View {
 
     private Paint paint;
 
+    /**
+     * 圆环的宽度
+     */
+    private int roundWidth = 130;
+
     public CircleRingView(Context context) {
-        super(context);
-        init();
+        this(context, null);
     }
 
     public CircleRingView(Context context, AttributeSet attrs) {
@@ -37,31 +41,17 @@ public class CircleRingView extends View {
 
     private void init() {
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        paint.setStrokeWidth(30);
-        paint.setColor(Color.BLUE);
-        paint.setStyle(Paint.Style.STROKE);
     }
 
     private void drawCircleRing(Canvas canvas) {
-        //canvas.drawCircle(100, 100, 50, paint);
-        int center = getWidth() / 2;
-        int innerCircle = dip2px(getContext(), 83); //设置内圆半径
-        int ringWidth = dip2px(getContext(), 5); //设置圆环宽度
+        //1.画最外层圆环
+        int center = getWidth() / 2;//圆心的坐标
+        int raduis = center - roundWidth / 2;//圆的半径
+        paint.setColor(Color.YELLOW);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(roundWidth);
+        canvas.drawCircle(center, center, raduis, paint);
 
-        //绘制内圆
-        this.paint.setARGB(155, 167, 190, 206);
-        this.paint.setStrokeWidth(2);
-        canvas.drawCircle(center, center, innerCircle, this.paint);
-
-        //绘制圆环
-        this.paint.setARGB(255, 212, 225, 233);
-        this.paint.setStrokeWidth(ringWidth);
-        canvas.drawCircle(center, center, innerCircle + 1 + ringWidth / 2, this.paint);
-
-        //绘制外圆
-        this.paint.setARGB(155, 167, 190, 206);
-        this.paint.setStrokeWidth(2);
-        canvas.drawCircle(center, center, innerCircle + ringWidth, this.paint);
     }
 
     public static int dip2px(Context context, float dpValue) {

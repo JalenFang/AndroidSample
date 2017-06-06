@@ -83,8 +83,10 @@ public class ShowViewActivity extends AppCompatActivity {
             llContainer.addView(new Draw2View(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.WAVE_VIEW)) {
             llContainer.addView(new WaveView(ShowViewActivity.this));
-        }else if (viewName.equals(ViewNameConstants.CIRCLE_RING)) {
-            llContainer.addView(new CircleRingView(ShowViewActivity.this));
+        } else if (viewName.equals(ViewNameConstants.CIRCLE_RING)) {
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(960, 960);
+            CircleRingView circleRingView = new CircleRingView(ShowViewActivity.this);
+            llContainer.addView(circleRingView, layoutParams);
         }
     }
 
