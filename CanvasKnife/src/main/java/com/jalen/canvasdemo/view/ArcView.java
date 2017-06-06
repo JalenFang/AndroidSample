@@ -55,6 +55,7 @@ public class ArcView extends View {
     // useCenter为false时，弧线区域是用弧线开始角度和结束角度直接连接起来的，
     // 当useCenter为true时，是弧线开始角度和结束角度都与中心点连接，形成一个扇形。
     //startAngel 从X轴的正方向开始顺时针开始递增
+    //Arc是矩形的内切圆
 
     private void drawArcView2(Canvas canvas) {
         RectF rect = new RectF(200, 200, 400, 400);
