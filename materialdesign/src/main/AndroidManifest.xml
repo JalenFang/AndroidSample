@@ -30,7 +30,7 @@
         <activity android:name=".activity.recyclerview.LinearHorizantalActivity" />
         <activity android:name=".activity.recyclerview.StaggeredActivity" />
         <activity android:name=".activity.recyclerview.GridActivity" />
-
+        <activity android:name=".activity.searchview.SeachViewActivity"/>
     </application>
 
 </manifest>

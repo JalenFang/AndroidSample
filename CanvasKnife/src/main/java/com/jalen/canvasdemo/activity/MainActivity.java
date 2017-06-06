@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         viewNameList.add(ViewNameConstants.DRAW_VIEW);
         viewNameList.add(ViewNameConstants.DRAW_VIEW_2);
         viewNameList.add(ViewNameConstants.WAVE_VIEW);
+        viewNameList.add(ViewNameConstants.CIRCLE_RING);
         return viewNameList;
     }
     // [-] Init

@@ -12,6 +12,7 @@ import com.jalen.canvasdemo.R;
 import com.jalen.canvasdemo.constants.ViewNameConstants;
 import com.jalen.canvasdemo.view.ArcView;
 import com.jalen.canvasdemo.view.BezierView;
+import com.jalen.canvasdemo.view.CircleRingView;
 import com.jalen.canvasdemo.view.CircleView;
 import com.jalen.canvasdemo.view.Draw2View;
 import com.jalen.canvasdemo.view.DrawView;
@@ -82,6 +83,8 @@ public class ShowViewActivity extends AppCompatActivity {
             llContainer.addView(new Draw2View(ShowViewActivity.this));
         } else if (viewName.equals(ViewNameConstants.WAVE_VIEW)) {
             llContainer.addView(new WaveView(ShowViewActivity.this));
+        }else if (viewName.equals(ViewNameConstants.CIRCLE_RING)) {
+            llContainer.addView(new CircleRingView(ShowViewActivity.this));
         }
     }
 
