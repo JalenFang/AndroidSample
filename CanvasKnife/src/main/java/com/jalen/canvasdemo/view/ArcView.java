@@ -46,11 +46,15 @@ public class ArcView extends View {
 
         drawRect3(canvas);
         drawArcView3(canvas);
+
+        drawRect4(canvas);
+        drawArcView4(canvas);
     }
 
     //当 drawArcs(rect,startAngel,sweepAngel,useCenter,paint)中的
     // useCenter为false时，弧线区域是用弧线开始角度和结束角度直接连接起来的，
     // 当useCenter为true时，是弧线开始角度和结束角度都与中心点连接，形成一个扇形。
+    //startAngel 从X轴的正方向开始顺时针开始递增
 
     private void drawArcView2(Canvas canvas) {
         RectF rect = new RectF(200, 200, 400, 400);
@@ -75,6 +79,23 @@ public class ArcView extends View {
         paint.setColor(Color.GREEN);
         paint.setStyle(Paint.Style.STROKE);
         canvas.drawRect(rect, paint);
+    }
+
+    private void drawRect4(Canvas canvas) {
+        RectF rect = new RectF(300, 0, 400, 100);
+        Paint paint = new Paint();
+        paint.setColor(Color.GREEN);
+        paint.setStyle(Paint.Style.STROKE);
+        canvas.drawRect(rect, paint);
+    }
+
+    private void drawArcView4(Canvas canvas) {
+        RectF rect = new RectF(300, 0, 400, 100);
+        canvas.drawArc(rect, //弧线所使用的矩形区域大小
+                270,  //开始角度
+                90, //扫过的角度
+                false, //是否使用中心
+                paint);
     }
 
     private void drawArcView(Canvas canvas) {
