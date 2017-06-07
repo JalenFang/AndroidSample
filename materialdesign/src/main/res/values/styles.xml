@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!--设置menu中item的图标颜色-->
+        <item name="android:textColorSecondary">@color/common_style_white</item>
+        <item name="searchViewStyle">@style/Widget.SearchView</item>
     </style>
 
     <style name="ToolBar.Base.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
@@ -36,6 +39,16 @@
     <!-- 箭头颜色 -->
     <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
         <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="Widget.SearchView" parent="Widget.AppCompat.SearchView">
+        <!--修改搜索框提示文字-->
+        <!--<item name="defaultQueryHint">搜索本地歌曲</item>-->
+        <!--修改打开搜索框的搜索按钮的图标-->
+        <!-- <item name="searchIcon">@mipmap/m5</item>-->
+        <!--修改搜索框左边的搜索按钮图标-->
+        <item name="searchHintIcon">@null</item>
+        <item name="queryBackground">@drawable/line_white</item>
     </style>
 
 </resources>

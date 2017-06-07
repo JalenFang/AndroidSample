@@ -8,4 +8,21 @@
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="always" />
 
+    <item
+        android:id="@+id/toolbar_menu_item_01"
+        android:title="@string/item_01"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/toolbar_menu_item_02"
+        android:title="@string/item_02"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/scan_local_music"
+        android:icon="@mipmap/ic_menu_home_normal"
+        android:orderInCategory="100"
+        android:title="扫描本地音乐"
+        app:showAsAction="never" />
+
 </menu>
