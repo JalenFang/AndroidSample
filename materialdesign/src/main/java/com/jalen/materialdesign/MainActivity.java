@@ -18,6 +18,7 @@ import com.jalen.materialdesign.activity.recyclerview.LinearVerticalActivity;
 import com.jalen.materialdesign.activity.recyclerview.StaggeredActivity;
 import com.jalen.materialdesign.activity.refresh.SwipeRefreshLayoutActivity;
 import com.jalen.materialdesign.activity.searchview.SeachViewActivity;
+import com.jalen.materialdesign.activity.searchview.SearchViewToolbarActivity;
 import com.jalen.materialdesign.activity.snackbar.SnackbarActivity;
 import com.jalen.materialdesign.activity.tab.TabLayoutBottomActivity;
 import com.jalen.materialdesign.activity.tab.TabLayoutTopActivity;
@@ -124,6 +125,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickSearchView(View v) {
         startActivity(SeachViewActivity.class);
+    }
+
+
+    public void onClickSearchViewToolbar(View v) {
+        startActivity(SearchViewToolbarActivity.class);
     }
 
     public void onClickTextInputLayout(View v) {

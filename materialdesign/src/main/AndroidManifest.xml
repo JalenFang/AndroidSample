@@ -31,6 +31,7 @@
         <activity android:name=".activity.recyclerview.StaggeredActivity" />
         <activity android:name=".activity.recyclerview.GridActivity" />
         <activity android:name=".activity.searchview.SeachViewActivity"/>
+        <activity android:name=".activity.searchview.SearchViewToolbarActivity"/>
     </application>
 
 </manifest>
