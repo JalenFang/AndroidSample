@@ -71,7 +71,6 @@ public class SeachViewActivity extends AppCompatActivity {
         searchView.setInputType(InputType.TYPE_CLASS_PHONE);
         searchView.setQueryHint("测试啊");
         searchView.setMaxWidth(500);
-        //todo dragon 2017/6/5 14:59   搜索图标是否可见
     }
 
 }
