@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  * @date 2017/6/7. 15:04
  * @editor
  * @date
- * @describe
+ * @describe  颜色设置参考 http://blog.csdn.net/android_freshman/article/details/51136657
  */
 public class TextInputLayoutActivity extends AppCompatActivity {
 

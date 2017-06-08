@@ -11,7 +11,7 @@
         android:id="@+id/activity_text_input_layout_toolbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolbar_height"
-
+        android:background="@color/common_style_blue"
         app:title="TextInputLayout的基本使用"
         app:titleTextAppearance="@style/ToolBar.Base.Title" />
 
@@ -35,8 +35,7 @@
             android:drawableStart="@mipmap/ic_mobile"
             android:gravity="center_vertical"
             android:hint="请输入手机号"
-            android:inputType="number"
-            android:textColor="@color/common_style_blue" />
+            android:inputType="number" />
 
     </android.support.design.widget.TextInputLayout>
 

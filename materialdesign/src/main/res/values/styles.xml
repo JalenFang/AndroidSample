@@ -8,7 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item> <!-- TextInputEditText选中的颜色或者CheckBox选中的颜色    -->
         <item name="android:textColorSecondary">@color/common_style_white</item> <!--设置Toolbar menu中item的图标颜色-->
         <item name="searchViewStyle">@style/Widget.SearchView</item> <!-- 可以指定SearchView的样式 -->
+        <item name="android:windowBackground">@color/common_style_gray_bg</item><!-- 所有页面的背景颜色 -->
         <item name="android:textColorHint">@color/common_style_green</item><!-- TextInputEditText指定提示文字的颜色 -->
+        <item name="colorControlNormal">@color/common_style_black</item> <!-- 下划线没有获取焦点的颜色 -->
+        <item name="colorControlActivated">@color/common_style_orange</item> <!-- 获取焦点或者点击的时候 下划线 的颜色-->
+        <item name="colorControlHighlight">@color/common_style_orange</item> <!-- 获取焦点或者点击的时候 下划线 的颜色-->
     </style>
 
     <style name="ToolBar.Base.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
