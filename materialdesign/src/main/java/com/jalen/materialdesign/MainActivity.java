@@ -22,6 +22,7 @@ import com.jalen.materialdesign.activity.searchview.SearchViewToolbarActivity;
 import com.jalen.materialdesign.activity.snackbar.SnackbarActivity;
 import com.jalen.materialdesign.activity.tab.TabLayoutBottomActivity;
 import com.jalen.materialdesign.activity.tab.TabLayoutTopActivity;
+import com.jalen.materialdesign.activity.textinput.TextInputLayoutActivity;
 import com.jalen.materialdesign.activity.toolbar.ToolbarActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -133,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickTextInputLayout(View v) {
-
+        startActivity(TextInputLayoutActivity.class);
     }
 
     public void onClickDrawerLayoutSimple(View v) {
