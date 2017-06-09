@@ -8,9 +8,10 @@
     tools:context="com.jalen.attrsstyle.MainActivity">
 
     <com.jalen.attrsstyle.AttrsStyleView
-
+        style="@style/my_style"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        app:color1="@color/color1" />
 
 </RelativeLayout>
