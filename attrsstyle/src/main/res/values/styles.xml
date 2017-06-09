@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="searchViewStyle">@style/Widget.SearchView</item> <!-- 可以指定SearchView的样式 -->
+        <item name="custom_style">@style/custom_theme_style</item> <!-- 可以指定SearchView的样式 -->
     </style>
 
     <style name="Widget.SearchView" parent="Widget.AppCompat.SearchView">
@@ -16,10 +17,6 @@
         <!-- <item name="searchIcon">@mipmap/m5</item>-->
         <!--修改搜索框左边的搜索按钮图标-->
         <item name="searchHintIcon">@null</item>
-    </style>
-
-    <style name="MyTextView" parent="android:style/Widget.TextView">
-        <item name="textSize">1</item>
     </style>
 
     <declare-styleable name="SearchView">
@@ -41,7 +38,7 @@
         <attr name="submitBackground" format="reference" />
         <attr name="android:focusable" />
     </declare-styleable>
-    
+
     <!-- <style name="Base.Widget.AppCompat.SearchView" parent="android:Widget">
          <item name="layout">@layout/abc_search_view</item>
          <item name="queryBackground">@drawable/abc_textfield_search_material</item>
@@ -54,5 +51,31 @@
          <item name="commitIcon">@drawable/abc_ic_commit_search_api_mtrl_alpha</item>
          <item name="suggestionRowLayout">@layout/abc_search_dropdown_item_icons_2line</item>
      </style>-->
+
+    <declare-styleable name="custom_attrs">
+        <attr name="color1" format="color" />
+        <attr name="color2" format="color" />
+        <attr name="color3" format="color" />
+    </declare-styleable>
+
+    <attr name="custom_style" format="reference" />
+
+    <style name="custom_theme_style">
+        <item name="color1">@color/color4</item>
+        <item name="color2">@color/color4</item>
+        <item name="color3">@color/color4</item>
+    </style>
+
+    <style name="my_style">
+        <item name="color1">@color/color2</item>
+        <item name="color2">@color/color1</item>
+        <item name="color3">@color/color1</item>
+    </style>
+
+    <style name="default_style">
+        <item name="color1">@color/color3</item>
+        <item name="color2">@color/color3</item>
+        <item name="color3">@color/color3</item>
+    </style>
 
 </resources>
