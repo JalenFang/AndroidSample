@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +34,7 @@
         <activity android:name=".activity.searchview.SeachViewActivity" />
         <activity android:name=".activity.searchview.SearchViewToolbarActivity" />
         <activity android:name=".activity.textinput.TextInputLayoutActivity" />
+        <activity android:name=".activity.palette.PaletteActivity" />
     </application>
 
 </manifest>

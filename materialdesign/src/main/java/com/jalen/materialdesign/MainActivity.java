@@ -12,11 +12,11 @@ import com.jalen.materialdesign.activity.dialog.BottomSheetDialogActivity;
 import com.jalen.materialdesign.activity.drawer.DrawerLayoutAnimationActivity;
 import com.jalen.materialdesign.activity.drawer.DrawerLayoutSimpleActivity;
 import com.jalen.materialdesign.activity.floatingactionbutton.FloatingActionButtonActivity;
+import com.jalen.materialdesign.activity.palette.PaletteActivity;
 import com.jalen.materialdesign.activity.recyclerview.GridActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearHorizantalActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearVerticalActivity;
 import com.jalen.materialdesign.activity.recyclerview.StaggeredActivity;
-import com.jalen.materialdesign.activity.refresh.SwipeRefreshLayoutActivity;
 import com.jalen.materialdesign.activity.searchview.SeachViewActivity;
 import com.jalen.materialdesign.activity.searchview.SearchViewToolbarActivity;
 import com.jalen.materialdesign.activity.snackbar.SnackbarActivity;
@@ -145,8 +145,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(DrawerLayoutAnimationActivity.class);
     }
 
+    public void onClickPalette(View v) {
+        startActivity(DrawerLayoutAnimationActivity.class);
+    }
+
     public void onClickSwipeRefreshLayout(View v) {
-        startActivity(SwipeRefreshLayoutActivity.class);
+        startActivity(PaletteActivity.class);
     }
 
     private void startActivity(Class<?> c) {
