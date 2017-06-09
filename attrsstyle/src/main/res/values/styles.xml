@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="searchViewStyle">@style/Widget.SearchView</item> <!-- 可以指定SearchView的样式 -->
+    </style>
+
+    <style name="Widget.SearchView" parent="Widget.AppCompat.SearchView">
+        <!--修改搜索框提示文字-->
+        <!--<item name="defaultQueryHint">搜索本地歌曲</item>-->
+        <!--修改打开搜索框的搜索按钮的图标-->
+        <!-- <item name="searchIcon">@mipmap/m5</item>-->
+        <!--修改搜索框左边的搜索按钮图标-->
+        <item name="searchHintIcon">@null</item>
+    </style>
+
+    <style name="MyTextView" parent="android:style/Widget.TextView">
+        <item name="textSize">1</item>
+    </style>
+
+    <declare-styleable name="SearchView">
+        <attr name="layout" format="reference" />
+        <attr name="iconifiedByDefault" format="boolean" />
+        <attr name="android:maxWidth" />
+        <attr name="queryHint" format="string" />
+        <attr name="defaultQueryHint" format="string" />
+        <attr name="android:imeOptions" />
+        <attr name="android:inputType" />
+        <attr name="closeIcon" format="reference" />
+        <attr name="goIcon" format="reference" />
+        <attr name="searchIcon" format="reference" />
+        <attr name="searchHintIcon" format="reference" />
+        <attr name="voiceIcon" format="reference" />
+        <attr name="commitIcon" format="reference" />
+        <attr name="suggestionRowLayout" format="reference" />
+        <attr name="queryBackground" format="reference" />
+        <attr name="submitBackground" format="reference" />
+        <attr name="android:focusable" />
+    </declare-styleable>
+    
+    <!-- <style name="Base.Widget.AppCompat.SearchView" parent="android:Widget">
+         <item name="layout">@layout/abc_search_view</item>
+         <item name="queryBackground">@drawable/abc_textfield_search_material</item>
+         <item name="submitBackground">@drawable/abc_textfield_search_material</item>
+         <item name="closeIcon">@drawable/abc_ic_clear_mtrl_alpha</item>
+         <item name="searchIcon">@drawable/abc_ic_search_api_mtrl_alpha</item>
+         <item name="searchHintIcon">@drawable/abc_ic_search_api_mtrl_alpha</item>
+         <item name="goIcon">@drawable/abc_ic_go_search_api_mtrl_alpha</item>
+         <item name="voiceIcon">@drawable/abc_ic_voice_search_api_mtrl_alpha</item>
+         <item name="commitIcon">@drawable/abc_ic_commit_search_api_mtrl_alpha</item>
+         <item name="suggestionRowLayout">@layout/abc_search_dropdown_item_icons_2line</item>
+     </style>-->
+
+</resources>
