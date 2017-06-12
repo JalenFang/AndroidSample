@@ -1,12 +1,13 @@
 package com.jalen.materialdesign.activity.dialog;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,7 +24,7 @@ import com.jalen.materialdesign.adapter.RecyclerViewAdapter2;
  */
 public class BottomSheetDialogActivity extends AppCompatActivity {
 
-    private BottomSheetDialog dialog;
+    private CustomDialog dialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,7 +60,7 @@ public class BottomSheetDialogActivity extends AppCompatActivity {
     }
 
     private void showBottomSheetDialog() {
-        dialog = new BottomSheetDialog(this);
+        dialog = new CustomDialog(this, getScreenHeight(BottomSheetDialogActivity.this));
         View contentView = View.inflate(this, R.layout.bottom_sheets_layout, null);
         RecyclerView itemView = (RecyclerView) contentView.findViewById(R.id.bottom_sheet_layout_recyclerView);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -75,4 +76,12 @@ public class BottomSheetDialogActivity extends AppCompatActivity {
             dialog.dismiss();
         }
     }
+
+    private static int getScreenHeight(Activity activity) {
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        return displaymetrics.heightPixels;
+    }
 }
+
+
