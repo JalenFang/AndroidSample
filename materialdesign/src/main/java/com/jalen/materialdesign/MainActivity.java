@@ -17,6 +17,7 @@ import com.jalen.materialdesign.activity.recyclerview.GridActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearHorizantalActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearVerticalActivity;
 import com.jalen.materialdesign.activity.recyclerview.StaggeredActivity;
+import com.jalen.materialdesign.activity.refresh.SwipeRefreshLayoutActivity;
 import com.jalen.materialdesign.activity.searchview.SeachViewActivity;
 import com.jalen.materialdesign.activity.searchview.SearchViewToolbarActivity;
 import com.jalen.materialdesign.activity.snackbar.SnackbarActivity;
@@ -146,11 +147,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickPalette(View v) {
-        startActivity(DrawerLayoutAnimationActivity.class);
+        startActivity(PaletteActivity.class);
     }
 
     public void onClickSwipeRefreshLayout(View v) {
-        startActivity(PaletteActivity.class);
+        startActivity(SwipeRefreshLayoutActivity.class);
     }
 
     private void startActivity(Class<?> c) {
