@@ -6,11 +6,12 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/activity_search_view_toolbar_toolbar"
+        android:id="@+id/activity_recyclerview_refresh_autoloadmore_toolbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolbar_height"
         android:background="@color/common_style_blue"
         app:theme="@style/ToolBar.Theme"
-        app:title="SVAndToolbar"
+        app:title="RecyclerView的刷新和自动加载"
         app:titleTextAppearance="@style/ToolBar.Base.Title" />
+
 </LinearLayout>

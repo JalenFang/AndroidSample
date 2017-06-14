@@ -17,6 +17,7 @@ import com.jalen.materialdesign.activity.recyclerview.GridActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearHorizantalActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearVerticalActivity;
 import com.jalen.materialdesign.activity.recyclerview.StaggeredActivity;
+import com.jalen.materialdesign.activity.recyclerview_refresh_autoloadmore.RecyclerViewRefreshAutoLoadMore;
 import com.jalen.materialdesign.activity.refresh.SwipeRefreshLayoutActivity;
 import com.jalen.materialdesign.activity.searchview.SeachViewActivity;
 import com.jalen.materialdesign.activity.searchview.SearchViewToolbarActivity;
@@ -115,6 +116,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickRecyclerViewStaggered(View v) {
         startActivity(StaggeredActivity.class);
+    }
+
+    public void onClickRecyclerViewRefreshAutoLoadMore(View v) {
+        startActivity(RecyclerViewRefreshAutoLoadMore.class);
     }
 
     public void onClickRecyclerViewGrid(View v) {

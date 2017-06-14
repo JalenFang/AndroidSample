@@ -3,18 +3,40 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item> <!-- 遮罩的颜色 例如ScrollView向下拉动到底显示出来的东西的颜色 -->
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item> <!-- 状态栏的颜色 -->
-        <item name="colorAccent">@color/colorAccent</item> <!-- TextInputEditText选中的颜色或者CheckBox选中的颜色    -->
-        <item name="android:textColorSecondary">@color/common_style_white</item> <!--设置Toolbar menu中item的图标颜色-->
-        <item name="searchViewStyle">@style/Widget.SearchView</item> <!-- 可以指定SearchView的样式 -->
-        <item name="android:windowBackground">@color/common_style_gray_bg</item><!-- 所有页面的背景颜色 -->
-        <item name="android:textColorHint">@color/common_style_green</item><!-- TextInputEditText指定提示文字的颜色 -->
-        <item name="colorControlNormal">@color/common_style_black</item> <!-- 下划线没有获取焦点的颜色 -->
-        <item name="colorControlActivated">@color/common_style_orange</item> <!-- 获取焦点或者点击的时候 下划线 的颜色-->
-        <item name="colorControlHighlight">@color/common_style_orange</item> <!-- 获取焦点或者点击的时候 下划线 的颜色-->
+        <!-- 遮罩的颜色 例如ScrollView向下拉动到底显示出来的东西的颜色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!-- 状态栏的颜色 -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <!-- TextInputEditText选中的颜色或者CheckBox选中的颜色    -->
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--设置Toolbar menu中item的图标颜色-->
+        <item name="android:textColorSecondary">@color/common_style_white</item>
+
+        <!-- 可以指定SearchView的样式 -->
+        <item name="searchViewStyle">@style/Widget.SearchView</item>
+
+        <!-- 所有页面的背景颜色 -->
+        <item name="android:windowBackground">@color/common_style_gray_bg</item>
+
+        <!-- TextInputEditText指定提示文字的颜色 -->
+        <item name="android:textColorHint">@color/common_style_green
+        </item>
+
+        <!-- 下划线没有获取焦点的颜色 也是Toolbar返回箭头的颜色 -->
+        <item name="colorControlNormal">@color/common_style_black</item>
+
+        <!-- 获取焦点或者点击的时候 下划线 的颜色-->
+        <item name="colorControlActivated">@color/common_style_orange</item>
+
+        <!--点击的水波纹的颜色-->
+        <!--<item name="colorControlHighlight">@color/common_style_orange</item> -->
     </style>
 
+
+    <!--ToolBar样式设置区域 ↓-->
     <style name="ToolBar.Base.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">17sp</item>
         <item name="android:textColor">@color/common_style_white</item>
@@ -25,6 +47,11 @@
         <item name="android:textColor">@color/common_style_black</item>
     </style>
 
+    <style name="ToolBar.Theme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="colorControlNormal">@color/common_style_white</item>
+    </style>
+
+    <!--ToolBar样式设置区域 ↑-->
 
     <style name="TabLayout" parent="Widget.Design.TabLayout">
         <item name="tabTextAppearance">@style/TabLayout.Title</item>
