@@ -14,4 +14,16 @@
         app:title="RecyclerView的刷新和自动加载"
         app:titleTextAppearance="@style/ToolBar.Base.Title" />
 
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/activity_recyclerview_refresh_autoloadmore_swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_recyclerview_refresh_autoloadmore_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 </LinearLayout>

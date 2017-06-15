@@ -371,6 +371,18 @@
                         android:text="RecyclerView的刷新和自动加载添加头部和尾部"
                         android:textAllCaps="false" />
 
+                    <Button
+                        android:id="@+id/btn_6_drag_swipe"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn_6_refresh_auto_loadmore"
+                        android:layout_toRightOf="@+id/tv_6"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickRecyclerViewDragSwipe"
+                        android:text="RecyclerView的拖拽，侧滑"
+                        android:textAllCaps="false" />
+
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 

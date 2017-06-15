@@ -35,7 +35,7 @@
         <activity android:name=".activity.searchview.SearchViewToolbarActivity" />
         <activity android:name=".activity.textinput.TextInputLayoutActivity" />
         <activity android:name=".activity.palette.PaletteActivity" />
-        <activity android:name=".activity.recyclerview_refresh_autoloadmore.RecyclerViewRefreshAutoLoadMore" />
+        <activity android:name=".activity.recyclerview_refresh_autoloadmore.RecyclerViewRefreshAutoLoadMoreActivity" />
     </application>
 
 </manifest>

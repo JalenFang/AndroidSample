@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 import com.jalen.materialdesign.activity.appbar.AppBarLayoutActivity;
 import com.jalen.materialdesign.activity.dialog.BottomSheetDialogActivity;
@@ -17,7 +18,7 @@ import com.jalen.materialdesign.activity.recyclerview.GridActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearHorizantalActivity;
 import com.jalen.materialdesign.activity.recyclerview.LinearVerticalActivity;
 import com.jalen.materialdesign.activity.recyclerview.StaggeredActivity;
-import com.jalen.materialdesign.activity.recyclerview_refresh_autoloadmore.RecyclerViewRefreshAutoLoadMore;
+import com.jalen.materialdesign.activity.recyclerview_refresh_autoloadmore.RecyclerViewRefreshAutoLoadMoreActivity;
 import com.jalen.materialdesign.activity.refresh.SwipeRefreshLayoutActivity;
 import com.jalen.materialdesign.activity.searchview.SeachViewActivity;
 import com.jalen.materialdesign.activity.searchview.SearchViewToolbarActivity;
@@ -119,7 +120,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickRecyclerViewRefreshAutoLoadMore(View v) {
-        startActivity(RecyclerViewRefreshAutoLoadMore.class);
+        startActivity(RecyclerViewRefreshAutoLoadMoreActivity.class);
+    }
+
+    public void onClickRecyclerViewDragSwipe(View v) {
+        Toast.makeText(this, "待开发", Toast.LENGTH_SHORT).show();
     }
 
     public void onClickRecyclerViewGrid(View v) {
@@ -127,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickRecyclerViewAnimation(View v) {
-
+        Toast.makeText(this, "待开发", Toast.LENGTH_SHORT).show();
     }
 
     public void onClickSearchView(View v) {

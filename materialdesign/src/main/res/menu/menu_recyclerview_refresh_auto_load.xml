@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_recyclerview_refresh_auto_load_add_header"
+        android:title="添加头部"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_recyclerview_refresh_auto_load_add_footer"
+        android:title="添加尾部"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_recyclerview_refresh_auto_load_refresh_add_header_footer"
+        android:title="添加头部和尾部"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_recyclerview_refresh_auto_load_refresh_auto_load"
+        android:title="自动加载"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_recyclerview_refresh_auto_load_refresh_add_header_auot_load"
+        android:title="添加头部和自动加载"
+        app:showAsAction="never" />
+
+</menu>
