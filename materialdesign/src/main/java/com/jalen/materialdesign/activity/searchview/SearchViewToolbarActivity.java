@@ -102,6 +102,8 @@ public class SearchViewToolbarActivity extends AppCompatActivity {
         //设置搜索框直接展开显示。左侧无放大镜(在搜索框中) 右侧无叉叉 有输入内容后有叉叉 不能关闭搜索框
         // searchView.onActionViewExpanded();
 
+        //一些设置可以指定他的样式 searchViewStyle
+
 
         //设置最大宽度
         //searchView.setMaxWidth(500);

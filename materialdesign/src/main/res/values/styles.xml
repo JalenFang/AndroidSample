@@ -79,7 +79,7 @@
         <!-- <item name="searchIcon">@mipmap/m5</item>-->
         <!--修改搜索框左边的搜索按钮图标-->
         <item name="searchHintIcon">@null</item>
-        <item name="queryBackground">@drawable/line_white</item>
+        <!--<item name="queryBackground">@drawable/line_white</item>-->
     </style>
 
 </resources>
