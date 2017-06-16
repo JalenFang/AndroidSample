@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Animator</string>
+
+
+    <string-array name="transition_type">
+        <item>基本使用</item>
+        <item>AddTarget</item>
+    </string-array>
+
+
+</resources>

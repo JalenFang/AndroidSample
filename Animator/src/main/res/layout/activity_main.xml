@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jalen.animatordemo.MainActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_corner_orange"
+                android:padding="10dp"
+                android:text="过渡动画"
+                android:textColor="@color/common_style_white"
+                android:textSize="15dp" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/common_style_white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/activity_main_tv_transition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_circular_blue"
+                        android:gravity="center"
+                        android:text="Transition"
+                        android:textColor="@color/common_style_black" />
+
+                    <Button
+                        android:id="@+id/btn_2"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/activity_main_tv_transition"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickTransitionBaseUse"
+                        android:text="Transition的基本使用"
+                        android:textAllCaps="false" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/activity_main_btn_Demo1Activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Demo1Activity"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/activity_main_btn_Interpolator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interpolator差值器"
+        android:textAllCaps="false" />
+
+</LinearLayout>

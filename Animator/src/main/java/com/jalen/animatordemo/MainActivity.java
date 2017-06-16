@@ -1,14 +1,23 @@
 package com.jalen.animatordemo;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Button;
 
 import com.jalen.animatordemo.activity.Demo1Activity;
 import com.jalen.animatordemo.activity.interpolator.InterpolatorActivity;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * @author Jalen
+ * @date 2017/6/16 11:18
+ * @editor
+ * @date
+ * @describe 动画的主界面
+ */
+public class MainActivity extends BaseActivity {
 
     private Button btnDemo1Activity;
 
@@ -16,9 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         btnDemo1Activity = (Button) findViewById(R.id.activity_main_btn_Demo1Activity);
-
-        setClickListener();
     }
 
 
@@ -43,4 +51,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void onClickTransitionBaseUse(View v) {
+        new AlertDialog.Builder(MainActivity.this)
+                .setItems(R.array.transition_type, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0://基本使用
+
+                                break;
+                            case 1://AddTarget
+
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                })
+                .show();
+    }
+
+    private void startActivity(Class<?> c) {
+        startActivity(new Intent(this, c));
+    }
+
+
 }

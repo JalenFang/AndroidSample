@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="common_style_white">#FFFFFF</color>
+    <color name="common_style_black">#000000</color>
+    <color name="common_style_blue">#41A0FF</color>
+    <color name="common_style_red">#C63B38</color>
+    <color name="common_style_orange">#FF9D00</color>
+    <color name="common_style_green">#00ca43</color>
+    <color name="common_style_gray_bg">#F8F9FB</color><!--主要用于背景-->
+    <color name="common_style_gray_divider">#e8e9e9</color><!--主要用于分割线-->
+
+</resources>
