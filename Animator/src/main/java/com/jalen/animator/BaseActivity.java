@@ -1,4 +1,4 @@
-package com.jalen.animatordemo;
+package com.jalen.animator;
 
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;

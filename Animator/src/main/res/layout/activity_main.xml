@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.jalen.animatordemo.MainActivity">
+    android:orientation="vertical">
 
     <include layout="@layout/toolbar" />
 
@@ -53,41 +51,36 @@
                         android:background="@drawable/shape_circular_blue"
                         android:gravity="center"
                         android:text="Transition"
-                        android:textColor="@color/common_style_black" />
+                        android:textColor="@color/common_style_white" />
 
                     <Button
-                        android:id="@+id/btn_2"
+                        android:id="@+id/activity_main_btn_transition_base_use"
                         style="?borderlessButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/activity_main_tv_transition"
                         android:gravity="left|center_vertical"
                         android:onClick="onClickTransitionBaseUse"
-                        android:text="Transition的基本使用"
+                        android:text="基本使用"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activity_main_btn_transition_base_use"
+                        android:layout_toRightOf="@+id/activity_main_tv_transition"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickTransitionBaseUse"
+                        android:text="指定动画执行者"
                         android:textAllCaps="false" />
 
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
 
-
         </LinearLayout>
 
     </ScrollView>
-
-
-    <Button
-        android:id="@+id/activity_main_btn_Demo1Activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Demo1Activity"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/activity_main_btn_Interpolator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Interpolator差值器"
-        android:textAllCaps="false" />
 
 </LinearLayout>

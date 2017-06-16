@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.jalen.animatordemo.MainActivity">
+    tools:context="com.jalen.animator.com.jalen.animator.MainActivity">
 
     <Button
         android:id="@+id/activity_demo1_btn_start_view_animation"

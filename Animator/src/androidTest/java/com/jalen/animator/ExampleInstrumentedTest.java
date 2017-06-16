@@ -1,4 +1,4 @@
-package com.jalen.animatordemo;
+package com.jalen.animator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

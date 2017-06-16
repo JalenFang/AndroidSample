@@ -1,4 +1,4 @@
-package com.jalen.animatordemo.activity.interpolator;
+package com.jalen.animator.activity.interpolator;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.animation.BounceInterpolator;
 import android.widget.Button;
 
-import com.jalen.animatordemo.R;
+import com.jalen.animator.R;
 
 /**
  * @author Dragon

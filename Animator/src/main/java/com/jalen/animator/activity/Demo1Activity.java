@@ -1,4 +1,4 @@
-package com.jalen.animatordemo.activity;
+package com.jalen.animator.activity;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jalen.animatordemo.R;
+import com.jalen.animator.R;
 
 /**
  * @author Dragon
