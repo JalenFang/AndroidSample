@@ -1,5 +1,8 @@
 package com.jalen.cropimage;
 
+import android.graphics.Bitmap;
+import android.os.Environment;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -11,9 +14,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
-
-import android.graphics.Bitmap;
-import android.os.Environment;
 
 
 public final class FileUtil {
@@ -321,8 +321,6 @@ public final class FileUtil {
 
     /**
      * 删除 directoryPath目录下的所有文件，包括删除删除文件夹
-     *
-     * @param directoryPath
      */
     public static void deleteDirectory(File dir) {
         if (dir.isDirectory()) {
