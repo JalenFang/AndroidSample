@@ -1,5 +1,6 @@
 package com.jalen.animator;
 
+import android.os.Build;
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -30,7 +31,11 @@ public class BaseActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                finish();
+                if (isApiUp21()) {
+                    finishAfterTransition();
+                } else {
+                    finish();
+                }
                 break;
             default:
                 break;
@@ -44,5 +49,9 @@ public class BaseActivity extends AppCompatActivity {
         if (toolbar != null) {
             toolbar.setTitle(title);
         }
+    }
+
+    public boolean isApiUp21() {
+        return Build.VERSION.SDK_INT >= 21 ? true : false;
     }
 }

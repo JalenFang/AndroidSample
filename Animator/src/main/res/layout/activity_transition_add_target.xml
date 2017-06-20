@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:onClick="onClickTransitionBaseUseStartAnimator"
+            android:onClick="onClickTransitionAddTargetStartAnimator"
             android:padding="10dp"
             android:text="开始动画" />
 
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:onClick="onClickTransitionBaseUsePauseAnimator"
+            android:onClick="onClickTransitionAddTargetPauseAnimator"
             android:padding="10dp"
             android:text="暂停动画" />
 
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:onClick="onClickTransitionBaseUseCancelAnimator"
+            android:onClick="onClickTransitionAddTargetCancelAnimator"
             android:padding="10dp"
             android:text="取消动画" />
 
@@ -39,7 +39,7 @@
 
 
     <FrameLayout
-        android:id="@+id/activity_transition_base_use_fl_rootview"
+        android:id="@+id/activity_transition_add_target_fl_rootview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

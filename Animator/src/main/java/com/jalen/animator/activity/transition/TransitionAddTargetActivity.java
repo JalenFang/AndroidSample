@@ -2,7 +2,6 @@ package com.jalen.animator.activity.transition;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.transition.ChangeBounds;
 import android.transition.Scene;
 import android.transition.TransitionManager;
@@ -15,37 +14,39 @@ import com.jalen.animator.R;
 
 /**
  * @author Dragon
- * @date 2017/6/16. 14:51
+ * @date 2017/6/19. 15:16
  * @editor
  * @date
  * @describe
  */
-public class TransitionBaseUseActivity extends BaseActivity {
+public class TransitionAddTargetActivity extends BaseActivity {
 
     private FrameLayout flRootView;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transition_base_use);
-        flRootView = (FrameLayout) findViewById(R.id.activity_transition_base_use_fl_rootview);
+        setContentView(R.layout.activity_transition_add_target);
+        flRootView = (FrameLayout) findViewById(R.id.activity_transition_add_target_fl_rootview);
     }
 
-    public void onClickTransitionBaseUseStartAnimator(View v) {
+    public void onClickTransitionAddTargetStartAnimator(View v) {
         int version = Build.VERSION.SDK_INT;
         if (version >= 19) {
             Scene scene2 = Scene.getSceneForLayout(flRootView, R.layout.scene2, v.getContext());
-            TransitionManager.go(scene2, new ChangeBounds());
+            ChangeBounds changeBounds = new ChangeBounds();
+            changeBounds.addTarget(R.id.image1);//指定动画的执行者  只让image1执行
+            TransitionManager.go(scene2, changeBounds);
         } else {
-            Toast.makeText(TransitionBaseUseActivity.this, "Api版本低于19", Toast.LENGTH_SHORT).show();
+            Toast.makeText(TransitionAddTargetActivity.this, "Api版本低于19", Toast.LENGTH_SHORT).show();
         }
     }
 
     public void onClickTransitionBaseUsePauseAnimator(View view) {
-        Toast.makeText(TransitionBaseUseActivity.this, "无Api", Toast.LENGTH_SHORT).show();
+        Toast.makeText(TransitionAddTargetActivity.this, "无Api", Toast.LENGTH_SHORT).show();
     }
 
     public void onClickTransitionBaseUseCancelAnimator(View view) {
-        Toast.makeText(TransitionBaseUseActivity.this, "无Api", Toast.LENGTH_SHORT).show();
+        Toast.makeText(TransitionAddTargetActivity.this, "无Api", Toast.LENGTH_SHORT).show();
     }
 }

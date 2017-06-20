@@ -1,10 +1,17 @@
 package com.jalen.animator;
 
+import android.annotation.TargetApi;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.jalen.animator.activity.transition.TransitionAddTargetActivity;
 import com.jalen.animator.activity.transition.TransitionBaseUseActivity;
+import com.jalen.animator.activity.transition.TransitionDelayActivity;
+import com.jalen.animator.activity.transition.customtransition.TransitionCustomColorActivity;
+import com.jalen.animator.activity.transition.pagecontent.PageContentFirstActivity;
+import com.jalen.animator.activity.transition.shareelement.ShareElementFirstActivity;
 
 /**
  * @author Jalen
@@ -29,6 +36,27 @@ public class MainActivity extends BaseActivity {
 
     public void onClickTransitionBaseUse(View v) {
         startActivity(TransitionBaseUseActivity.class);
+    }
+
+    public void onClickTransitionAddTarget(View view) {
+        startActivity(TransitionAddTargetActivity.class);
+    }
+
+    public void onClickTransitionDelay(View view) {
+        startActivity(TransitionDelayActivity.class);
+    }
+
+    public void onClickTransitionCustomColor(View viw) {
+        startActivity(TransitionCustomColorActivity.class);
+    }
+
+    public void onClickTransitionShareElement(View view) {
+        startActivity(ShareElementFirstActivity.class);
+    }
+
+    @TargetApi(21)
+    public void onClickTransitionPageContent(View viw) {
+        startActivity(new Intent(this, PageContentFirstActivity.class), ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
 
     private void startActivity(Class<?> c) {

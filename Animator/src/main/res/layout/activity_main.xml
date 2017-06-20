@@ -65,14 +65,63 @@
                         android:textAllCaps="false" />
 
                     <Button
+                        android:id="@+id/activity_main_btn_transition_add_target"
                         style="?borderlessButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/activity_main_btn_transition_base_use"
                         android:layout_toRightOf="@+id/activity_main_tv_transition"
                         android:gravity="left|center_vertical"
-                        android:onClick="onClickTransitionBaseUse"
+                        android:onClick="onClickTransitionAddTarget"
                         android:text="指定动画执行者"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/activity_main_btn_transition_delay"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activity_main_btn_transition_add_target"
+                        android:layout_toRightOf="@+id/activity_main_tv_transition"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickTransitionDelay"
+                        android:text="延时动画"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/activity_main_btn_transition_custom_color"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activity_main_btn_transition_delay"
+                        android:layout_toRightOf="@+id/activity_main_tv_transition"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickTransitionCustomColor"
+                        android:text="颜色改变的过渡动画"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/activity_main_btn_transition_page_content"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activity_main_btn_transition_custom_color"
+                        android:layout_toRightOf="@+id/activity_main_tv_transition"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickTransitionPageContent"
+                        android:text="页面内容的过渡动画"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/activity_main_btn_transition_share_element"
+                        style="?borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activity_main_btn_transition_page_content"
+                        android:layout_toRightOf="@+id/activity_main_tv_transition"
+                        android:gravity="left|center_vertical"
+                        android:onClick="onClickTransitionShareElement"
+                        android:text="共享元素的过渡动画"
                         android:textAllCaps="false" />
 
                 </RelativeLayout>

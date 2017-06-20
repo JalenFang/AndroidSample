@@ -22,6 +22,33 @@
             android:label="Transition的基本使用" />
         <activity android:name="com.jalen.animator.activity.Demo1Activity" />
         <activity android:name="com.jalen.animator.activity.interpolator.InterpolatorActivity" />
+        <activity
+            android:name=".activity.transition.TransitionAddTargetActivity"
+            android:label="Transition指定动画执行者" />
+        <activity
+            android:name=".activity.transition.TransitionDelayActivity"
+            android:label="Transition延时动画" />
+
+        <activity
+            android:name=".activity.transition.customtransition.TransitionCustomColorActivity"
+            android:label="颜色改变的动画" />
+
+        <activity
+            android:name=".activity.transition.pagecontent.PageContentFirstActivity"
+            android:label="页面内容过渡动画页面一" />
+
+        <activity
+            android:name=".activity.transition.pagecontent.PageContentSecondActivity"
+            android:label="页面内容过渡动画页面二" />
+
+        <activity
+            android:name=".activity.transition.shareelement.ShareElementFirstActivity"
+            android:label="共享元素页面一" />
+
+        <activity
+            android:name=".activity.transition.shareelement.ShareElementSecondActivity"
+            android:label="共享元素页面二" />
+
     </application>
 
 </manifest>

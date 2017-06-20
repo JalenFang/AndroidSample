@@ -180,7 +180,7 @@ public class CropImageView extends View {
                     invalidate();
 
                     Log.v("width():" + (mDrawableSrc.width()) + "height():" + (mDrawableSrc.height()), "new width():" + (mDrawableDst.width()) + "new height():" + (mDrawableDst.height()));
-                    Log.v("" + (float) mDrawableSrc.height() / (float) mDrawableSrc.width(), "mDrawableDst:" + (float) mDrawableDst.height() / (float) mDrawableDst.width());
+                    Log.v("" + (float) mDrawableSrc.height() / (float) mDrawableSrc.width(), "drawableDstRect:" + (float) mDrawableDst.height() / (float) mDrawableDst.width());
 
                     oldx_0 = newx_0;
                     oldy_0 = newy_0;
@@ -219,10 +219,10 @@ public class CropImageView extends View {
 
         configureBounds();
 
-//Log.v("mTempDst", "---------"+mDrawableDst);
-//Log.v("mTempDst:", "---------"+mDrawable.getBounds().width());
-//Log.v("mTempDst:", "---------"+mDrawable.getBounds().height());
-//Log.v("mTempDst:", "-------ration:"+(float)mDrawable.getBounds().width()/(float)mDrawable.getBounds().height());
+//Log.v("mTempDst", "---------"+drawableDstRect);
+//Log.v("mTempDst:", "---------"+drawable.getBounds().width());
+//Log.v("mTempDst:", "---------"+drawable.getBounds().height());
+//Log.v("mTempDst:", "-------ration:"+(float)drawable.getBounds().width()/(float)drawable.getBounds().height());
 
 
         mDrawable.draw(canvas);

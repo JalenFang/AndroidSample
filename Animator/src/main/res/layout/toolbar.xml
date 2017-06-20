@@ -4,5 +4,6 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="56dp"
+    android:elevation="5dp"
     app:theme="@style/Toolbar.Theme"
     app:titleTextAppearance="@style/Toolbar.Title" />
